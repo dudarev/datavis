@@ -26,5 +26,5 @@ setp(labels, fontsize=20)
 xlabel('step number',fontsize=24);
 ylabel('time spent on each step, min',fontsize=24);
 
-savefig('001_simple_bar.png')
+savefig('001_simple_bar.png',dpi=36)
 show()

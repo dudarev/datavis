@@ -65,5 +65,5 @@ setp(labels, fontsize=20)
 xlabel('fraction of words, %',fontsize=24);
 ylabel('fraction of text, %',fontsize=24);
 
-savefig('fraction.png',dpi=72)
+savefig('fraction.png',dpi=36)
 show()
