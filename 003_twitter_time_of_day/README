@@ -1,0 +1,5 @@
+create directory data and execute following scripts in a row
+change parameters in config.yaml.sample and rename it to config.yaml
+python get_followers.py
+python get_timelines.py
+python plot_all_counts.py
