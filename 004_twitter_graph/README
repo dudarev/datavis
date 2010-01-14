@@ -1,0 +1,7 @@
+1. To get list members use
+
+get_members_page.py
+get_members_list.py
+
+The former gets them from an html page, the later from a specified Twitter list.
+Rename config.yaml.sample to config.yaml and set your Twitter username and password there.
