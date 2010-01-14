@@ -41,7 +41,6 @@ labels = ax.get_xticklabels()
 setp(labels, fontsize=20)
 labels = ax.get_yticklabels()
 setp(labels, fontsize=20)
- 
 xlabel('hours (Kyiv)',fontsize=24);
 ylabel('fraction, %',fontsize=24);
 
