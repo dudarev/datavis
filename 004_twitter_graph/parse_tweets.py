@@ -4,8 +4,12 @@ by default find topics (hashes)
 use options
 
     -h - for help
-    -g - to find mentionings graph
     -t - to find times
+    -g - to find mentionings graph
+
+    options that work when parsing mentionings:
+    -a - include people outside of the group (all)
+    -o - only include people outside of the group
 """
 
 import sys
@@ -14,11 +18,14 @@ import getopt
 argv = sys.argv
 try:
     # options that require arguments are followed by :
-    opts, args = getopt.getopt(argv[1:], "gth",['--help'])
+    opts, args = getopt.getopt(argv[1:], "gthao",['--help'])
 except getopt.error, msg:
      raise Usage(msg)
 
 is_finding_hashes,is_finding_graph,is_finding_times = True,False,False
+
+# when using -g
+is_finding_all,is_finding_outside = False,False
 
 # process options
 for o, a in opts:
@@ -29,6 +36,10 @@ for o, a in opts:
         is_finding_hashes,is_finding_graph,is_finding_times = False,True,False
     if o == '-t':
         is_finding_hashes,is_finding_graph,is_finding_times = False,False,True
+    if o == '-a':
+        is_finding_all = True
+    if o == '-o':
+        is_finding_outside = True
 
 import os
 import simplejson as json
@@ -79,20 +90,30 @@ for user_name in members:
                     hash2people[h].append(user_name)
 
         if is_finding_graph:
+            """
+            build dict:
+            members = {'user':['user_mentioned1','user_mentioned2']}
+            """
             people = find_hash(s.text,find_mentionings=True)
             for p in people:
-                # only outside of the group
-                # if not p in members
-                if p in members:
-                # weighted
-                # friends.append(p)
-                # friends_count[p] = friends_count.get(p,0)+1
-                # members[user_name][p] = members[user_name].get(p,0)+1
-                # non-weighted
-                    if not p in members[user_name]:
-                        members[user_name][p] = 1
-                        friends.append(p)
-                        friends_count[p] = friends_count.get(p,0)+1
+                if not p == user_name:
+                    # only outside of the group
+                    # if not p in members
+                    is_condition = p in members
+                    if is_finding_outside:
+                        is_condition = not p in members
+                    if is_finding_all:
+                        is_condition = True
+                    if is_condition:
+                    # weighted
+                    # friends.append(p)
+                    # friends_count[p] = friends_count.get(p,0)+1
+                    # members[user_name][p] = members[user_name].get(p,0)+1
+                    # non-weighted
+                        if not p in members[user_name]:
+                            members[user_name][p] = 1
+                            friends.append(p)
+                            friends_count[p] = friends_count.get(p,0)+1
 
         if is_finding_times:
             h = s.created_at.hour
@@ -142,6 +163,14 @@ if is_finding_graph:
     print_pairs(friends_freq_pairs)
     save_pairs(friends_freq_pairs,'data/friends_counts.txt')
 
-    f = open('data/friends_graph.txt','w')
+    if is_finding_outside:
+        f = open('data/friends_outside_graph.txt','w')
+    else:
+        f = open('data/friends_graph.txt','w')
     f.write(json.dumps(members))
     f.close()
+
+    if is_finding_all or is_finding_outside:
+        print '%2.1f involved %d/%d' % (float(len(friends_count))/len(members),len(friends_count),len(members))
+    else:
+        print '%2.1f%% involved %d/%d' % (len(friends_count)*100./len(members),len(friends_count),len(members))
