@@ -5,3 +5,7 @@ get_members_list.py
 
 The former gets them from an html page, the later from a specified Twitter list.
 Rename config.yaml.sample to config.yaml and set your Twitter username and password there.
+
+2. Get timelines (last 100 tweets) of all members with
+
+get_timelines.py
