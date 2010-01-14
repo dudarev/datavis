@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.4.1: http://docutils.sourceforge.net/" />
+<title>Добыча информации в Twitter</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger
+:Contact: goodger@users.sourceforge.net
+:Date: $Date: 2005-12-18 01:56:14 +0100 (Sun, 18 Dec 2005) $
+:Revision: $Revision: 4224 $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin-left: 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left {
+  clear: left }
+
+img.align-right {
+  clear: right }
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font-family: serif ;
+  font-size: 100% }
+
+pre.literal-block, pre.doctest-block {
+  margin-left: 2em ;
+  margin-right: 2em ;
+  background-color: #eeeeee }
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+tt.docutils {
+  background-color: #eeeeee }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="twitter">
+<h1 class="title">Добыча информации в Twitter</h1>
+<h2 class="subtitle" id="id1">14 января 2010 г.</h2>
+<p>23 января в Запорожье пройдет <a class="reference" href="http://ukrtweet.com.ua/">#UKRTWEET</a> -- первый всеукраинский баркэмп посвященный Twitter. Граф выше показывает, кто из его участников, с кем разговаривает и кого упоминает. Заметка ниже посвящена анализу этого графа.</p>
+<p>О data mining в Twitter я буду говорить 16 января на первой в этом году донецкой встрече &quot;Кофе и код&quot;, которая пройдет в кофейне &quot;<a class="reference" href="http://www.izba4i.com">Изба-читальня</a>&quot; с 13:00 до 15:00. Поэтому здесь параллельно проведу анализ группы людей из Донецка, которые пишут в Twitter.</p>
+<p>Добывать информацию</p>
+<p>Анализ информации здесь, в основном, проводится при помощи Python. Весь код лежит на <a class="reference" href="http://github.com/dudarev/datavis/tree/master/004_twitter_graph/">github</a>, в каждой секции есть ссылки на соответствующие скрипты. В конце заметки перечислены все используемые библиотеки. Надеюсь, и без просмотра кода в заметке можно найти любопытную информацию.</p>
+<div class="section">
+<h1><a id="id3" name="id3">1. Получение информации</a></h1>
+<p>Для начала, получаем список всех участников групп. <a class="reference" href="http://ukrtweet.com.ua/?page_id=10'">Список участников</a> #UKRTWEET есть на странице баркэмпа. Скачиваем и парсим его при помощи <a class="reference" href="http://www.crummy.com/software/BeautifulSoup/">BeautifulSoup</a> (<a class="reference" href="http://github.com/dudarev/datavis/blob/master/004_twitter_graph/get_members_page.py">код</a>). Для людей, которые твитят из Донецка, я веду список <a class="reference" href="http://twitter.com/dudarev/donetsk">&#64;dudarev/donetsk</a>. Сохраняем его участников при помощи библиотеки <a class="reference" href="http://github.com/joshthecoder/tweepy">tweepy</a> (<a class="reference" href="http://github.com/dudarev/datavis/blob/master/004_twitter_graph/get_members_list.py">код</a>).</p>
+<p>Для каждого из участников скачиваем последние 100 твитов и сохраняем их. Tweepy автоматически парсит JSON, а так как в этот раз мы хотим сохранить данные такими какие они есть, то немного подправляем класс tweepy.API (<a class="reference" href="http://github.com/dudarev/datavis/blob/master/004_twitter_graph/get_timelines.py">код</a>).</p>
+</div>
+<div class="section">
+<h1><a id="id5" name="id5">2. О чем говорят</a></h1>
+<p>Теперь можно анализировать информацию. Давайте посмотрим какие хэштеги наиболее часто употреблялись каждой группой. Для этого напишем утилиту, которая принимая строку возвращает список всех встречающихся в ней хэштегов. Для ее написания <a class="reference" href="http://ru.wikipedia.org/wiki/Разработка_через_тестирование">TDD</a> -- весьма кстати (<a class="reference" href="http://github.com/dudarev/datavis/blob/master/004_twitter_graph/find_hash.py">смотрим код</a>). С помощью этой утилиты парсим все твиты (<a class="reference" href="http://github.com/dudarev/datavis/blob/master/004_twitter_graph/parse_tweets.py">код</a>).</p>
+<p>Наиболее часто-упоминаемые хэштеги участниками #UKRTWEET (число в скобках -- количество разных людей, которые использовали этот хэштег):</p>
+<ol class="arabic simple">
+<li>ukrtweet (15)</li>
+<li>sledui (13)</li>
+<li>nicua (7)</li>
+<li>google (6)</li>
+<li>zp_ua (5)</li>
+<li>ru_ff (5)</li>
+<li>habr (5)</li>
+<li>twitter (4)</li>
+<li>rutwitter (4)</li>
+<li>ff (4)</li>
+<li>elect_ua (4)</li>
+</ol>
+<p>Люди из Донецка упоминали:</p>
+<ol class="arabic simple">
+<li>donetsk (25)</li>
+<li>habr (10)</li>
+<li>wave (6)</li>
+<li>ru_ff (6)</li>
+<li>linux (6)</li>
+<li>ukraine (5)</li>
+<li>sledui (5)</li>
+<li>radiot (5)</li>
+<li>google (5)</li>
+<li>codejam (5)</li>
+<li>2010sms (5)</li>
+</ol>
+<p>Как видим, в каждой группе, хэштег, описывающий группу -- на первом месте по употреблению. Есть и общие интересы: habr, ru_ff, sledui, google.</p>
+</div>
+<div class="section">
+<h1><a id="id6" name="id6">3. Когда говорят</a></h1>
+<p>Давайте посмотрим, в какое время, группа проявляет наибольшую активность. Для этого воспользуемся тем же самым скриптом, пробегающим по всем твитам, но на этот раз сформируем списки количества твитов в данный час дня и сохраним их в отдельных файлах (опция '-t' при вызове из коммандной строки). Изобразим диаграмы при помощи библиотеки <a class="reference" href="http://matplotlib.sourceforge.net/">Matplotlib</a> (<a class="reference" href="http://github.com/dudarev/datavis/blob/master/004_twitter_graph/plot_hour_count.py">код</a>).</p>
+<img alt="http://farm5.static.flickr.com/4028/4274484106_327a61a43c.jpg" src="http://farm5.static.flickr.com/4028/4274484106_327a61a43c.jpg" />
+<p>Участники #UKRTWEET проявляют активность выше средней с 10 утра до 1 часа ночи по киевскому времени, с пиком около 5 часов вечера.</p>
+<img alt="http://farm5.static.flickr.com/4023/4273739261_9480a18aca.jpg" src="http://farm5.static.flickr.com/4023/4273739261_9480a18aca.jpg" />
+<p>Дончане активны в то же время, но пик наблюдается около 11 вечера. Быть может, это потому что люди собирающиеся на баркэмп рассматривают Twitter как рабочий инструмент и активны в нем в рабочее время. Хотя, из-за недавних праздников, эти данные могут быть непоказательными.</p>
+</div>
+<div class="section">
+<h1><a id="id7" name="id7">4. Социальный граф</a></h1>
+<p>Граф из данных Twitter можно строить различными способами. Здесь мы будем следовать следующей конструкции: если человек А упомянул человека Б хотя бы один раз (не важно ретвит или ответ), от вершины А к вершине Б строим ориентированное ребро. Граф не взвешенный, то есть ребро строим только единожды.</p>
+<p>Все тот же скрипт с опцией '-g' выстраивает из сохраненных твитов словарь представляющий такой граф и сохраняет его в формате JSON для последующего анализа (<a class="reference" href="http://github.com/dudarev/datavis/blob/master/004_twitter_graph/parse_tweets.py">код</a>).</p>
+<p>Несколько количественных наблюдений. В группе #UKRTWEET 52% упоминают кого-то из группы (55/106). А всего упоминают 933 человека что в 8.8 раз больше самой группы (933/106).</p>
+<p>В донецкой же группе 45% вовлечены в группу (102/225), а всего различных упоминаний в 4.4 раза больше самой группы (998/225). Явно, что люди, которые собираются посетить баркэмп о Twitter более активно используют его как средство общения.</p>
+</div>
+<div class="section">
+<h1><a id="id8" name="id8">5. Авторитетность</a></h1>
+<p>Авторитетность в социальном графе можно анализировать разными способами. Самый простой -- отсортировать участников по количеству входящих ребер. У кого больше -- тот больше авторитетен. В поиске по Интернету Google в качестве одного из критериев для авторитетности страниц использует PageRank. Он вычисляется при помощи случайного блуждания по графу, где в качестве узлов -- страницы, а ребро между узлами -- если одна страница ссылается на другую. Случайный блуждатель двигается по графу и с какой-то малой вероятностью перемещается на случайный узел и начинает блуждание заново. PageRank равен доли пребывания на каком-то узле за все время блуждания. Чем он больше, тем узел более авторитетен.</p>
+<p>Здесь мы остановимся только на двух вышеупомянутых критериях. Стоит упомянуть, что при анализе социальных графов большое внимание уделяют <a class="reference" href="http://en.wikipedia.org/wiki/Centrality">различным центральностям</a>. Их использование в качестве критерия авторитетности может иметь больший смысл для более распределенных графов.</p>
+<p>Одна из распространенных библиотек Python для работы с графами -- <a class="reference" href="http://networkx.lanl.gov/">NetworkX</a>. Ее мы и будем использовать. Создав граф G, считать различные его параметры очень удобно. Так, например, чтобы посчитать PageRank всех узлов, достаточно написать:</p>
+<pre class="literal-block">
+pr = networkx.pagerank(G,alpha=0.85,max_iter=200)
+</pre>
+<p>Хочется подчеркнуть, что все числа ниже -- для искуственно выделенных  из твиттерсферы групп. Те же самые люди, могут быть глобально более влиятельными и авторитетными. Числа ниже -- для комуникаций внутри данных групп.</p>
+<p>Давайте отобразим зависимость PageRank для всех узлов от количества узлов, которые на них указывают (<a class="reference" href="http://github.com/dudarev/datavis/blob/master/004_twitter_graph/plot_pr_followers.py">код</a>).</p>
+<img alt="http://farm5.static.flickr.com/4041/4275091706_0807736a9a.jpg" src="http://farm5.static.flickr.com/4041/4275091706_0807736a9a.jpg" />
+<p>Естественно, большой авторитет у двух организаторов (<a class="reference" href="http://twitter.com/karelina">&#64;karelina</a> и <a class="reference" href="http://twitter.com/u02">&#64;u02</a>). У известного украинского блогера <a class="reference" href="http://twitter.com/woofer_kyyiv">&#64;woofer_kyyivu</a> авторитетность так же высока, хотя и упоминают меньше людей, но упоминают равномерно по группе. Авторитетность официального аккаунта баркэмпа (<a class="reference" href="http://twitter.com/ukrtweet">&#64;ukrtweet</a>) существенно ниже. Одна из интерпретаций: люди предпочитают общаться и упоминать людей. Быть может поэтому во многих официальных западных аккаунтах явно указываются имена вещающих.</p>
+<img alt="http://farm3.static.flickr.com/2703/4275091740_3b9cc7d6ff.jpg" src="http://farm3.static.flickr.com/2703/4275091740_3b9cc7d6ff.jpg" />
+<p>Безусловный лидер внутри донецкой группы -- <a class="reference" href="http://twitter.com/quantizer">&#64;quantizer</a>. Различия в PageRank при схожих количествах упоминаний для следующих участников можно трактовать, например, так: <a class="reference" href="http://twitter.com/olchik_terl">&#64;olchik_terl</a> и <a class="reference" href="http://twitter.com/lancerenok">&#64;lancerenok</a> больше общаются с людьми из разных частей социального графа группы, тогда как <a class="reference" href="http://twitter.com/lapidarius">&#64;lapidarius</a>, <a class="reference" href="http://twitter.com/meesix">&#64;meesix</a> и <a class="reference" href="http://twitter.com/alderko">&#64;alderko</a> больше взаимодействуют со своими локальными сообществами (в основном выделенными по профессиональному признаку), поэтому у второй группы PageRank чуть ниже, чем у первой.</p>
+</div>
+<div class="section">
+<h1><a id="id10" name="id10">6. Влияющие извне</a></h1>
+</div>
+<div class="section">
+<h1><a id="id11" name="id11">7. Сообщества</a></h1>
+</div>
+<div class="section">
+<h1><a id="id12" name="id12">8. Метки для сообществ</a></h1>
+</div>
+<div class="section">
+<h1><a id="id13" name="id13">Упражнения</a></h1>
+<ol class="arabic simple">
+<li>Какими средствами в группе чаще всего пользуются чтобы твитить (web, TweetDeck, Echofon,...)?</li>
+<li>betweenness_centrality eigenvector_centrality</li>
+</ol>
+</div>
+<div class="section">
+<h1><a id="id14" name="id14">Используемые библиотеки</a></h1>
+<dl class="docutils">
+<dt><a class="reference" href="http://matplotlib.sourceforge.net/">Matplotlib</a></dt>
+<dd>позволяет рисовать</dd>
+</dl>
+<p><a class="reference" href="http://igraph.sourceforge.net">http://igraph.sourceforge.net</a></p>
+</div>
+</div>
+</body>
+</html>
