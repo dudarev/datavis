@@ -64,6 +64,9 @@ for user_name in members:
     if is_finding_graph:
         friends = []
 
+    if is_finding_times:
+        hour_counts = {}
+
     for d in data:
         s = parse_status(d,api)
 
@@ -90,6 +93,19 @@ for user_name in members:
                         members[user_name][p] = 1
                         friends.append(p)
                         friends_count[p] = friends_count.get(p,0)+1
+
+        if is_finding_times:
+            h = s.created_at.hour
+            hour_counts[h] = hour_counts.get(h,0) + 1
+
+    if is_finding_times:
+        print hour_counts
+        file_counts = open('data/%s_hour_counts.txt' % user_name,'w')
+        file_counts.write(user_name)
+        hours = range(24)
+        for h in hours:
+            file_counts.write(',%d' % hour_counts.get(h,0))
+        file_counts.close()
 
     count += 1
 
