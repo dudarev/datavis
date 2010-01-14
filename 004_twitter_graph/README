@@ -1,11 +1,26 @@
+Rename config.yaml.sample to config.yaml and set your Twitter username and password there.
+
 1. To get list members use
 
-get_members_page.py
-get_members_list.py
+python get_members_page.py
+python get_members_list.py
 
 The former gets them from an html page, the later from a specified Twitter list.
-Rename config.yaml.sample to config.yaml and set your Twitter username and password there.
 
 2. Get timelines (last 100 tweets) of all members with
 
-get_timelines.py
+python get_timelines.py
+
+3. Parse timelines and extract topics (hashtags)
+
+python parse_tweets.py
+
+see data in data/hash_counts.txt
+
+4. Parse timelines and extract tweet hours 
+
+python parse_tweets.py -t
+
+5. Plot data tweets hours distribution
+
+python plot_hour_count.py
