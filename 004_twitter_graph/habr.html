@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="Docutils 0.4.1: http://docutils.sourceforge.net/" />
-<title>Добыча информации в Twitter</title>
+<title>Анализ социального графа</title>
 <style type="text/css">
 
 /*
@@ -290,13 +290,17 @@ ul.auto-toc {
 </style>
 </head>
 <body>
-<div class="document" id="twitter">
-<h1 class="title">Добыча информации в Twitter</h1>
-<h2 class="subtitle" id="id1">14 января 2010 г.</h2>
-<p>23 января в Запорожье пройдет <a class="reference" href="http://ukrtweet.com.ua/">#UKRTWEET</a> -- первый всеукраинский баркэмп посвященный Twitter. Граф выше показывает, кто из его участников, с кем разговаривает и кого упоминает. Заметка ниже посвящена анализу этого графа.</p>
-<p>О data mining в Twitter я буду говорить 16 января на первой в этом году донецкой встрече &quot;Кофе и код&quot;, которая пройдет в кофейне &quot;<a class="reference" href="http://www.izba4i.com">Изба-читальня</a>&quot; с 13:00 до 15:00. Поэтому здесь параллельно проведу анализ группы людей из Донецка, которые пишут в Twitter.</p>
+<div class="document" id="id1">
+<h1 class="title">Анализ социального графа</h1>
+<h2 class="subtitle" id="id2">Черновик</h2>
+<a class="reference image-reference" href="http://www.flickr.com/photos/dudarev/4284073103/"><img align="right" alt="http://farm5.static.flickr.com/4045/4284073103_3c557ea056.jpg" class="align-right" src="http://farm5.static.flickr.com/4045/4284073103_3c557ea056.jpg" /></a>
+<p>Количество американских патентных заявок связанных с социальными сетями последние 5 лет росло на 250% каждый год (<a class="reference" href="http://en.wikipedia.org/wiki/Social_network#Patents">ссылка</a>). Так, например, одна корпорация подала патентную заявку на метод ценообразования который учитывает положение покупателя в социальном графе (<a class="reference" href="http://yro.slashdot.org/story/09/12/12/1942207/Microsoft-Invents-Price-Gouging-the-Least-Influential">обсуждение на Slashdot</a>). Другая корпорация недавно воплотила максимально упрощенный вариант этой схемы, продавая свои новые телефоны влиятельным узлам социального графа за $0, а остальным за $530.</p>
+<p>Анализ социальных сетей (<a class="reference" href="http://en.wikipedia.org/wiki/Social_network#Social_network_analysis">Social Network Analysis</a>) существовал задолго до Интернета, но в последнее время набирает обороты.</p>
+<p>Мне было интересно посмотреть, как эффективно алгоритм, выделяющий кластеры в графах, сработает для некоторых групп в Twitter, которые представляют для меня интерес.</p>
+<p>23 января в Запорожье пройдет <a class="reference" href="http://ukrtweet.com.ua/">#UKRTWEET</a> -- первый всеукраинский баркэмп посвященный Twitter. Граф выше показывает, кто из его участников, с кем разговаривает и кого упоминает.</p>
+<p>Заметка ниже посвящена анализу этого графа. Весь код используемых здесь скриптов лежит на <a class="reference" href="http://github.com/dudarev/datavis/tree/master/004_twitter_graph/">github</a>. Изложение, в какой-то мере, вдохновлено <a class="reference" href="http://habrahabr.ru/blogs/books/79151/">недавно упомянутой на Хабре</a> книгой Тоби Сегаран «Программируем коллективный разум», код примеров которой доступен <a class="reference" href="http://kiwitobes.com/PCI_Code.zip">на сайте автора</a>.</p>
+<p>Также о data mining в Twitter я говорил 16 января на первой в этом году донецкой встрече &quot;Кофе и код&quot;. Поэтому здесь параллельно проведу анализ группы людей из Донецка, которые пишут в Twitter. Кстати, в этом году донецкие встречи будут регулярными -- каждую третью субботу месяца (следующая 20 февраля). Следите за <a class="reference" href="http://groups.google.com/group/cnc-donetsk">группой</a>.</p>
 <p>Добывать информацию</p>
-<p>Анализ информации здесь, в основном, проводится при помощи Python. Весь код лежит на <a class="reference" href="http://github.com/dudarev/datavis/tree/master/004_twitter_graph/">github</a>, в каждой секции есть ссылки на соответствующие скрипты. В конце заметки перечислены все используемые библиотеки. Надеюсь, и без просмотра кода в заметке можно найти любопытную информацию.</p>
 <div class="section">
 <h1><a id="id3" name="id3">1. Получение информации</a></h1>
 <p>Для начала, получаем список всех участников групп. <a class="reference" href="http://ukrtweet.com.ua/?page_id=10'">Список участников</a> #UKRTWEET есть на странице баркэмпа. Скачиваем и парсим его при помощи <a class="reference" href="http://www.crummy.com/software/BeautifulSoup/">BeautifulSoup</a> (<a class="reference" href="http://github.com/dudarev/datavis/blob/master/004_twitter_graph/get_members_page.py">код</a>). Для людей, которые твитят из Донецка, я веду список <a class="reference" href="http://twitter.com/dudarev/donetsk">&#64;dudarev/donetsk</a>. Сохраняем его участников при помощи библиотеки <a class="reference" href="http://github.com/joshthecoder/tweepy">tweepy</a> (<a class="reference" href="http://github.com/dudarev/datavis/blob/master/004_twitter_graph/get_members_list.py">код</a>).</p>
@@ -307,31 +311,26 @@ ul.auto-toc {
 <p>Теперь можно анализировать информацию. Давайте посмотрим какие хэштеги наиболее часто употреблялись каждой группой. Для этого напишем утилиту, которая принимая строку возвращает список всех встречающихся в ней хэштегов. Для ее написания <a class="reference" href="http://ru.wikipedia.org/wiki/Разработка_через_тестирование">TDD</a> -- весьма кстати (<a class="reference" href="http://github.com/dudarev/datavis/blob/master/004_twitter_graph/find_hash.py">смотрим код</a>). С помощью этой утилиты парсим все твиты (<a class="reference" href="http://github.com/dudarev/datavis/blob/master/004_twitter_graph/parse_tweets.py">код</a>).</p>
 <p>Наиболее часто-упоминаемые хэштеги участниками #UKRTWEET (число в скобках -- количество разных людей, которые использовали этот хэштег):</p>
 <ol class="arabic simple">
-<li>ukrtweet (15)</li>
-<li>sledui (13)</li>
-<li>nicua (7)</li>
-<li>google (6)</li>
-<li>zp_ua (5)</li>
-<li>ru_ff (5)</li>
-<li>habr (5)</li>
-<li>twitter (4)</li>
-<li>rutwitter (4)</li>
-<li>ff (4)</li>
-<li>elect_ua (4)</li>
+<li>ukrtweet (20)</li>
+<li>sledui (20)</li>
+<li>elect_ua (16)</li>
+<li>ru_ff (10)</li>
+<li>zp_ua (9)</li>
+<li>nicua (9)</li>
+<li>google (9)</li>
+<li>twitter (7)</li>
+<li>habr (7)</li>
 </ol>
 <p>Люди из Донецка упоминали:</p>
 <ol class="arabic simple">
-<li>donetsk (25)</li>
-<li>habr (10)</li>
+<li>donetsk (31)</li>
+<li>habr (12)</li>
+<li>radiot (8)</li>
+<li>sledui (7)</li>
+<li>ru_ff (7)</li>
+<li>google (7)</li>
 <li>wave (6)</li>
-<li>ru_ff (6)</li>
 <li>linux (6)</li>
-<li>ukraine (5)</li>
-<li>sledui (5)</li>
-<li>radiot (5)</li>
-<li>google (5)</li>
-<li>codejam (5)</li>
-<li>2010sms (5)</li>
 </ol>
 <p>Как видим, в каждой группе, хэштег, описывающий группу -- на первом месте по употреблению. Есть и общие интересы: habr, ru_ff, sledui, google.</p>
 </div>
@@ -341,32 +340,56 @@ ul.auto-toc {
 <img alt="http://farm5.static.flickr.com/4028/4274484106_327a61a43c.jpg" src="http://farm5.static.flickr.com/4028/4274484106_327a61a43c.jpg" />
 <p>Участники #UKRTWEET проявляют активность выше средней с 10 утра до 1 часа ночи по киевскому времени, с пиком около 5 часов вечера.</p>
 <img alt="http://farm5.static.flickr.com/4023/4273739261_9480a18aca.jpg" src="http://farm5.static.flickr.com/4023/4273739261_9480a18aca.jpg" />
-<p>Дончане активны в то же время, но пик наблюдается около 11 вечера. Быть может, это потому что люди собирающиеся на баркэмп рассматривают Twitter как рабочий инструмент и активны в нем в рабочее время. Хотя, из-за недавних праздников, эти данные могут быть непоказательными.</p>
+<p>Дончане активны в то же время, но пик наблюдается около 11 вечера. Быть может, это потому что люди собирающиеся на баркэмп рассматривают Twitter как рабочий инструмент и активны в нем в рабочее время. Хотя, из-за недавних праздников, эти данные могут быть не показательными.</p>
 </div>
 <div class="section">
 <h1><a id="id7" name="id7">4. Социальный граф</a></h1>
 <p>Граф из данных Twitter можно строить различными способами. Здесь мы будем следовать следующей конструкции: если человек А упомянул человека Б хотя бы один раз (не важно ретвит или ответ), от вершины А к вершине Б строим ориентированное ребро. Граф не взвешенный, то есть ребро строим только единожды.</p>
 <p>Все тот же скрипт с опцией '-g' выстраивает из сохраненных твитов словарь представляющий такой граф и сохраняет его в формате JSON для последующего анализа (<a class="reference" href="http://github.com/dudarev/datavis/blob/master/004_twitter_graph/parse_tweets.py">код</a>).</p>
-<p>Несколько количественных наблюдений. В группе #UKRTWEET 52% упоминают кого-то из группы (55/106). А всего упоминают 933 человека что в 8.8 раз больше самой группы (933/106).</p>
-<p>В донецкой же группе 45% вовлечены в группу (102/225), а всего различных упоминаний в 4.4 раза больше самой группы (998/225). Явно, что люди, которые собираются посетить баркэмп о Twitter более активно используют его как средство общения.</p>
+<p>Несколько количественных наблюдений. В группе #UKRTWEET 58% упоминают кого-то из группы (61/106). А всего упоминают 1221 человека что в 11.5 раз больше самой группы (1221/106).</p>
+<p>В донецкой же группе 51.6% вовлечены в группу (116/225), а всего различных упоминаний в 6 раза больше самой группы (1341/225). Явно, что люди, которые собираются посетить баркэмп о Twitter более активно используют его как средство общения.</p>
 </div>
 <div class="section">
 <h1><a id="id8" name="id8">5. Авторитетность</a></h1>
-<p>Авторитетность в социальном графе можно анализировать разными способами. Самый простой -- отсортировать участников по количеству входящих ребер. У кого больше -- тот больше авторитетен. В поиске по Интернету Google в качестве одного из критериев для авторитетности страниц использует PageRank. Он вычисляется при помощи случайного блуждания по графу, где в качестве узлов -- страницы, а ребро между узлами -- если одна страница ссылается на другую. Случайный блуждатель двигается по графу и с какой-то малой вероятностью перемещается на случайный узел и начинает блуждание заново. PageRank равен доли пребывания на каком-то узле за все время блуждания. Чем он больше, тем узел более авторитетен.</p>
-<p>Здесь мы остановимся только на двух вышеупомянутых критериях. Стоит упомянуть, что при анализе социальных графов большое внимание уделяют <a class="reference" href="http://en.wikipedia.org/wiki/Centrality">различным центральностям</a>. Их использование в качестве критерия авторитетности может иметь больший смысл для более распределенных графов.</p>
-<p>Одна из распространенных библиотек Python для работы с графами -- <a class="reference" href="http://networkx.lanl.gov/">NetworkX</a>. Ее мы и будем использовать. Создав граф G, считать различные его параметры очень удобно. Так, например, чтобы посчитать PageRank всех узлов, достаточно написать:</p>
+<p>Авторитетность в социальном графе можно анализировать разными способами. Самый простой -- отсортировать участников по количеству входящих ребер. У кого больше -- тот больше авторитетен. Такой спооб годен для небольших графов. В поиске по Интернету Google в качестве одного из критериев для авторитетности страниц использует PageRank. Он вычисляется при помощи случайного блуждания по графу, где в качестве узлов -- страницы, а ребро между узлами -- если одна страница ссылается на другую. Случайный блуждатель двигается по графу и время от времени перемещается на случайный узел и начинает блуждание заново. PageRank равен доли пребывания на каком-то узле за все время блуждания. Чем он больше, тем узел более авторитетен.</p>
+<p>Здесь мы остановимся только на двух вышеупомянутых критериях. Стоит упомянуть, что при анализе социальных графов еще большое внимание уделяют <a class="reference" href="http://en.wikipedia.org/wiki/Centrality">различным центральностям</a>. Их использование в качестве критерия авторитетности может иметь больший смысл для более распределенных социальных графов.</p>
+<p>Одна из распространенных библиотек Python для работы с графами -- <a class="reference" href="http://networkx.lanl.gov/">NetworkX</a>. Ее и будем использовать. Создав граф G, считать различные его параметры очень удобно. Так, например, чтобы посчитать PageRank всех узлов, достаточно написать:</p>
 <pre class="literal-block">
-pr = networkx.pagerank(G,alpha=0.85,max_iter=200)
+pr = networkx.pagerank(G)
 </pre>
-<p>Хочется подчеркнуть, что все числа ниже -- для искуственно выделенных  из твиттерсферы групп. Те же самые люди, могут быть глобально более влиятельными и авторитетными. Числа ниже -- для комуникаций внутри данных групп.</p>
+<p>Хочется подчеркнуть, что все числа ниже -- для искуственно выделенных  из твиттерсферы групп. Другие участники этих групп, могут быть глобально более влиятельными и авторитетными. Числа ниже -- для комуникаций внутри данных групп.</p>
 <p>Давайте отобразим зависимость PageRank для всех узлов от количества узлов, которые на них указывают (<a class="reference" href="http://github.com/dudarev/datavis/blob/master/004_twitter_graph/plot_pr_followers.py">код</a>).</p>
-<img alt="http://farm5.static.flickr.com/4041/4275091706_0807736a9a.jpg" src="http://farm5.static.flickr.com/4041/4275091706_0807736a9a.jpg" />
-<p>Естественно, большой авторитет у двух организаторов (<a class="reference" href="http://twitter.com/karelina">&#64;karelina</a> и <a class="reference" href="http://twitter.com/u02">&#64;u02</a>). У известного украинского блогера <a class="reference" href="http://twitter.com/woofer_kyyiv">&#64;woofer_kyyivu</a> авторитетность так же высока, хотя и упоминают меньше людей, но упоминают равномерно по группе. Авторитетность официального аккаунта баркэмпа (<a class="reference" href="http://twitter.com/ukrtweet">&#64;ukrtweet</a>) существенно ниже. Одна из интерпретаций: люди предпочитают общаться и упоминать людей. Быть может поэтому во многих официальных западных аккаунтах явно указываются имена вещающих.</p>
-<img alt="http://farm3.static.flickr.com/2703/4275091740_3b9cc7d6ff.jpg" src="http://farm3.static.flickr.com/2703/4275091740_3b9cc7d6ff.jpg" />
-<p>Безусловный лидер внутри донецкой группы -- <a class="reference" href="http://twitter.com/quantizer">&#64;quantizer</a>. Различия в PageRank при схожих количествах упоминаний для следующих участников можно трактовать, например, так: <a class="reference" href="http://twitter.com/olchik_terl">&#64;olchik_terl</a> и <a class="reference" href="http://twitter.com/lancerenok">&#64;lancerenok</a> больше общаются с людьми из разных частей социального графа группы, тогда как <a class="reference" href="http://twitter.com/lapidarius">&#64;lapidarius</a>, <a class="reference" href="http://twitter.com/meesix">&#64;meesix</a> и <a class="reference" href="http://twitter.com/alderko">&#64;alderko</a> больше взаимодействуют со своими локальными сообществами (в основном выделенными по профессиональному признаку), поэтому у второй группы PageRank чуть ниже, чем у первой.</p>
+<a class="reference image-reference" href="http://www.flickr.com/photos/dudarev/4284156103/"><img alt="http://farm3.static.flickr.com/2802/4284156103_de89678451.jpg" src="http://farm3.static.flickr.com/2802/4284156103_de89678451.jpg" /></a>
+<p>Естественно, большой авторитет у двух организаторов (<a class="reference" href="http://twitter.com/karelina">&#64;karelina</a> и <a class="reference" href="http://twitter.com/u02">&#64;u02</a>). У известного украинского блогера <a class="reference" href="http://twitter.com/woofer_kyyiv">&#64;woofer_kyyiv</a> авторитетность измеряемая в PageRank высока, хотя и упоминают меньше людей, но упоминают равномерно по группе (из разных сообществ). Авторитетность официального аккаунта баркэмпа (<a class="reference" href="http://twitter.com/ukrtweet">&#64;ukrtweet</a>) ниже при большем упоминании. Одна из интерпретаций: люди предпочитают общаться и упоминать людей. Быть может поэтому во многих официальных западных аккаунтах явно указываются имена вещающих.</p>
+<a class="reference image-reference" href="http://www.flickr.com/photos/dudarev/4284901726/"><img alt="http://farm3.static.flickr.com/2773/4284901726_159d473f4b.jpg" src="http://farm3.static.flickr.com/2773/4284901726_159d473f4b.jpg" /></a>
+<p>Безусловный лидер внутри донецкой группы -- <a class="reference" href="http://twitter.com/quantizer">&#64;quantizer</a>. Различия в PageRank при схожих количествах упоминаний для следующих участников можно трактовать, например, так: <a class="reference" href="http://twitter.com/olchik_terl">&#64;olchik_terl</a> и <a class="reference" href="http://twitter.com/lancerenok">&#64;lancerenok</a> больше общаются с людьми из разных частей социального графа группы, тогда как <a class="reference" href="http://twitter.com/medialex">&#64;medialex</a>, <a class="reference" href="http://twitter.com/lapidarius">&#64;lapidarius</a>, <a class="reference" href="http://twitter.com/meesix">&#64;meesix</a>, <a class="reference" href="http://twitter.com/alderko">&#64;alderko</a> больше взаимодействуют со своими локальными сообществами (в основном выделенными по профессиональному признаку, об этом ниже), поэтому у второй группы PageRank чуть ниже, чем у первой.</p>
 </div>
 <div class="section">
 <h1><a id="id10" name="id10">6. Влияющие извне</a></h1>
+<p>Люди вне групп тоже влияют на группы. Определим самых влиятельных подобно тому как делали это с хэштегами: отсортируем людей вне групп по количеству людей, которые их упоминают в группе (<a class="reference" href="http://github.com/dudarev/datavis/blob/master/004_twitter_graph/parse_tweets.py">скрипт</a> тот же, что парсит, но с опциями '-g -o' создает файл data/friends_outside_graph.txt).</p>
+<p>Для #UKRTWEET (в скобках -- число разных людей из группы упоминавших):</p>
+<ol class="arabic simple">
+<li>podarok (10)</li>
+<li>blogoreader (7)</li>
+<li>yaroslavazhnyuk (6)</li>
+<li>wedmid (6)</li>
+<li>taras (6)</li>
+<li>marillin (6)</li>
+<li>flabius (6)</li>
+<li>artemzeleny (6)</li>
+</ol>
+<p>Для Донецка:</p>
+<ol class="arabic simple">
+<li>bobuk (8)</li>
+<li>olyapka (7)</li>
+<li>woofer_kyyiv (6)</li>
+<li>ekozlov (6)</li>
+<li>zvuki (5)</li>
+<li>tweetmeme (5)</li>
+<li>podarok (5)</li>
+</ol>
+<p>Такой подход можно использовать для поиска интересных людей. Если вам интересна какая-то группа, то вероятно те люди, которых эта группа упоминает, тоже могут быть вам интересны.</p>
+<p>Как усовершенствование, для упоминающих можно складывать не единицы, а PageRank. Так те, которые извне больше влияют на влиятельных в группе, будут иметь больший вес. Оставляем это для желающих в качестве упражнения с кодом.</p>
 </div>
 <div class="section">
 <h1><a id="id11" name="id11">7. Сообщества</a></h1>
@@ -379,6 +402,7 @@ pr = networkx.pagerank(G,alpha=0.85,max_iter=200)
 <ol class="arabic simple">
 <li>Какими средствами в группе чаще всего пользуются чтобы твитить (web, TweetDeck, Echofon,...)?</li>
 <li>betweenness_centrality eigenvector_centrality</li>
+<li>Влияние извне взвешенное через PageRank.</li>
 </ol>
 </div>
 <div class="section">
