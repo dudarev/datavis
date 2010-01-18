@@ -1,14 +1,15 @@
 """plot pagerank vs. number of members mentioning that member"""
 
-title = "Donetsk"
-figure_file_name = "pr_vs_followers_donetsk.png"
+title = "#UkrTweet"
+figure_file_name = "pr_vs_followers_ukrtweet.png"
 # what points to label
-followers_min = 9
-pr_min = 0.02
+followers_min = 6
+pr_min = 0.027
 # figure parameters
-x_max = 25 
-y_max = 0.07
-shift_more = ('gasique','lapidarius')
+x_max = 27
+y_max = 0.08
+shift_more = ('gasique','o_saltan')
+shift_less = ('lapidarius')
 
 import networkx as nx
 import matplotlib.pyplot as plt
@@ -63,15 +64,18 @@ fig = plt.figure()
 ax = plt.axes([0.15, 0.15, 0.75, 0.75])
 
 transOffset = offset_copy(ax.transData, fig=fig, x = 0.05, y=0.10, units='inches')
-transOffset_more = offset_copy(ax.transData, fig=fig, x = 0.05, y=0.25, units='inches')
+transOffset_more = offset_copy(ax.transData, fig=fig, x = 0.05, y=0.15, units='inches')
+transOffset_less = offset_copy(ax.transData, fig=fig, x = 0.05, y=-0.05, units='inches')
 
 for x, y, t in zip(n_followers_ar,pr_ar,m_ar):
     plt.plot((x,),(y,), 'ro')
     if y > pr_min and x > followers_min:
         if t in shift_more:
-            plt.text(x, y, t, transform=transOffset_more,horizontalalignment="right",fontsize=16)
+            plt.text(x, y, t, transform=transOffset_more,horizontalalignment="left",fontsize=16)
+        elif t in shift_less:
+            plt.text(x, y, t, transform=transOffset_less,horizontalalignment="left",fontsize=16)
         else:
-            plt.text(x, y, t, transform=transOffset,horizontalalignment="right",fontsize=16)
+            plt.text(x, y, t, transform=transOffset,horizontalalignment="left",fontsize=16)
 
 plt.ylim(0,y_max)
 plt.xlim(0,x_max)
@@ -84,5 +88,5 @@ plt.xlabel('# of followers',fontsize=20);
 plt.ylabel('PageRank',fontsize=20);
 plt.title(title,fontsize=22);
 
-plt.savefig(figure_file_name,dpi=54)
+plt.savefig(figure_file_name,dpi=96)
 plt.show()
