@@ -24,3 +24,29 @@ python parse_tweets.py -t
 5. Plot data tweets hours distribution
 
 python plot_hour_count.py
+
+6. Create graph file data/friends_graph.txt
+
+python parse_tweets.py -g
+
+7. Plot PageRank vs. number of mentionings
+
+python plot_pr_followers.py 
+
+8. Find influential people outside of the group
+
+python parse_tweets.py -g -o
+
+file data/friends_outside_counts.txt is created
+
+9. Plot graph and save information about it to 
+
+python plot_graph.py
+
+10. Compile
+
+convert
+community 
+hierarchy
+
+11.
