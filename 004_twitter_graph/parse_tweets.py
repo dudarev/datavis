@@ -161,14 +161,19 @@ if is_finding_graph:
     friends_freq_pairs.sort(reverse=True)
 
     print_pairs(friends_freq_pairs)
-    save_pairs(friends_freq_pairs,'data/friends_counts.txt')
+    if is_finding_outside:
+        save_pairs(friends_freq_pairs,'data/friends_outside_counts.txt')
+    elif not is_finding_all:
+        save_pairs(friends_freq_pairs,'data/friends_counts.txt')
 
+    f = None
     if is_finding_outside:
         f = open('data/friends_outside_graph.txt','w')
-    else:
+    elif not is_finding_all:
         f = open('data/friends_graph.txt','w')
-    f.write(json.dumps(members))
-    f.close()
+    if f:
+        f.write(json.dumps(members))
+        f.close()
 
     if is_finding_all or is_finding_outside:
         print '%2.1f involved %d/%d' % (float(len(friends_count))/len(members),len(friends_count),len(members))
