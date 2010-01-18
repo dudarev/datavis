@@ -29,7 +29,7 @@ count = 1
 
 for user in file:
 
-    user_name = user.strip()
+    user_name = user.strip().lower()
     print count, user_name
     count += 1 
 
