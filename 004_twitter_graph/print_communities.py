@@ -82,7 +82,7 @@ def print_two_members(members_list,pr):
     member_pr_pairs = zip(pr_list,members_list)
     member_pr_pairs.sort(reverse=True)
     first_two = [m for pr,m in member_pr_pairs][0:2]
-    print ' ', first_two[0], '  ', first_two[1], ' ...'
+    print '%s %s' % (first_two[0], first_two[1])
 
 print 40*'-'
 from classify_cluster import classify_cluster
