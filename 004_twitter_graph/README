@@ -39,14 +39,25 @@ python parse_tweets.py -g -o
 
 file data/friends_outside_counts.txt is created
 
-9. Plot graph and save information about it to 
+9. Plot graph and save information about it to (option -l to plot with labels)
 
-python plot_graph.py
+python plot_graph.py  -l
 
-10. Compile
+10. Compile C++ files from http://sites.google.com/site/findcommunities/ and move executable to the present directory
 
 convert
 community 
 hierarchy
 
-11.
+11. Find communities
+
+python find_communities.py
+python plot_graph.py  -l
+
+12. Download all groups all users are in
+
+python get_lists.py
+
+13. Print members of communities
+
+python print_communities.py
