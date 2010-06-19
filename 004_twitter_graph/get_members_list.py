@@ -3,11 +3,11 @@
 from get_config import get_config
 import tweepy
 
-user = 'dudarev'
-slug = 'donetsk'
+user = 'timurka'
+slug = 'chelly'
 
 config = get_config()
-user = config["twitter_username"]
+# user = config["twitter_username"]
 
 auth = tweepy.BasicAuthHandler(config["twitter_username"], config["twitter_password"])
 api = tweepy.API(auth)

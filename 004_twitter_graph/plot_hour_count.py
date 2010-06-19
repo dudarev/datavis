@@ -29,7 +29,11 @@ for user in file:
 
 ax = axes([0.15, 0.15, 0.75, 0.75])
 
-hours = array([2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,0,1])
+# Kyiv
+# hours = array([2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,0,1])
+# Chelyabinsk
+hours = array([5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,0,1,2,3,4])
+
 print hours 
 fraction = counts_total * 100. / sum(counts_total)
 bar(hours, fraction,width=1,edgecolor='blue')
@@ -41,7 +45,7 @@ labels = ax.get_xticklabels()
 setp(labels, fontsize=20)
 labels = ax.get_yticklabels()
 setp(labels, fontsize=20)
-xlabel('hours (Kyiv)',fontsize=24);
+xlabel('hours (+5 GMT)',fontsize=24);
 ylabel('fraction, %',fontsize=24);
 
 # plot average

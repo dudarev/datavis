@@ -1,14 +1,14 @@
 """plot pagerank vs. number of members mentioning that member"""
 
-title = "#UkrTweet"
-figure_file_name = "pr_vs_followers_ukrtweet.png"
+title = "Chelyabinsk"
+figure_file_name = "pr_vs_followers_chelly.png"
 # what points to label
-followers_min = 6
-pr_min = 0.027
+followers_min = 20
+pr_min = 0.02
 # figure parameters
-x_max = 27
-y_max = 0.08
-shift_more = ('gasique','o_saltan')
+x_max = 60
+y_max = 0.06
+shift_more = ('gasique','o_saltan','baksheevdv')
 shift_less = ('lapidarius')
 
 import networkx as nx
@@ -64,7 +64,7 @@ fig = plt.figure()
 ax = plt.axes([0.15, 0.15, 0.75, 0.75])
 
 transOffset = offset_copy(ax.transData, fig=fig, x = 0.05, y=0.10, units='inches')
-transOffset_more = offset_copy(ax.transData, fig=fig, x = 0.05, y=0.15, units='inches')
+transOffset_more = offset_copy(ax.transData, fig=fig, x = 0.05, y=0.18, units='inches')
 transOffset_less = offset_copy(ax.transData, fig=fig, x = 0.05, y=-0.05, units='inches')
 
 for x, y, t in zip(n_followers_ar,pr_ar,m_ar):
