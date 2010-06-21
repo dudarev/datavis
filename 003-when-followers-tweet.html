@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+    <head> 
+        <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+        <title>When Followers Tweet</title> 
+        <link type="image/x-icon" href="/favicon.ico" rel= "shortcut icon" /> 
+        <link rel="stylesheet" href="screen.css" type="text/css" media="screen, projection">
+        <link rel="stylesheet" href="print.css" type="text/css" media="print">
+        <!--[if lt IE 8]><link rel="stylesheet" href="ie.css" type="text/css" media="screen, projection"><![endif]-->
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <link rel="stylesheet" type="text/css" href="writings.css" />
+    </head> 
+ 
+    <body id="index" class="home"> 
+
+        <div id="navigation">
+            <div class="navigation-container">
+            <a href="/datavis">Simple Data Visulization</a>: <span class="title">When Followers Tweet</span>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <h1> When Followers Tweet</h1>
+
+            <div id="abstract">
+            
+            </div>
+            
+            <div class="span-16" id="content">
+            <div align="center" class="align-center"><img alt="&lt;http://4.bp.blogspot.com/_rZy4zSAOlB8/SyjEdL79EEI/AAAAAAAABTA/GVT_efUXYqk/s1600-h/003_izba4i.png&gt;`_" class="align-center" src="http://4.bp.blogspot.com/_rZy4zSAOlB8/SyjEdL79EEI/AAAAAAAABTA/GVT_efUXYqk/s320/003_izba4i.png" /></div>
+<p>One of the goals of <a class="reference external" href="http://www.tweetingplaces.com/">TweetingPlaces</a> is to help small local businesses to connect to their customers. One of the ways for them to increase exposure on Twitter may be to schedule tweets of non-immediate importance to times when the message may be seen by most of the followers. The plot above shows activity of followers on Twitter. It may help to get some insights on when to schedule tweets. Still, the best metric can be provided by direct measurements of the reactions on tweets posted at different times.</p>
+<p>The plot is for a coffee shop &quot;<a class="reference external" href="http://www.izba4i.com/">Изба-читальня</a>&quot; in Donetsk, Ukraine (during winter in UTC +2 timezone). Its tweets can be found at <a class="reference external" href="http://twitter.com/izba4i">&#64;izba4i</a> . Most of its followers are Donetsk locals and tweet from 9 a.m. till 11 p.m. of local time with peak around 1 p.m. (lunch time).</p>
+<p>The focus of <a class="reference external" href="http://www.tweetingplaces.com/">TweetingPlaces</a> is global, and scheduling tweets at particular times may be not a good strategy, but out of curiosity here is a plot for <a class="reference external" href="http://twitter.com/tweetingplaces">&#64;tweetingplaces</a> followers:</p>
+<div align="center" class="align-center"><img alt="&lt;http://3.bp.blogspot.com/_rZy4zSAOlB8/SyjHlbzPZsI/AAAAAAAABTI/LQcLlFiajIk/s1600-h/003_tweetingplaces.png&gt;`_" class="align-center" src="http://3.bp.blogspot.com/_rZy4zSAOlB8/SyjHlbzPZsI/AAAAAAAABTI/LQcLlFiajIk/s320/003_tweetingplaces.png" /></div>
+<p>The minimum is much less pronounced and the followers start tweeting more than average after 8 a.m. Eastern Time.</p>
+<p><a class="reference external" href="http://github.com/dudarev/datavis/tree/master/003_twitter_time_of_day/">The code</a> for these plots is available at github. In addition to <a class="reference external" href="http://matplotlib.sourceforge.net/">Matplotlib</a> that has been used in all the previous examples, <a class="reference external" href="http://code.google.com/p/tweepy/">tweepy</a> library is used to interact with Twitter API (note that you may have to limit number of requests per hour if many of them have to be made). Also, <a class="reference external" href="http://pyyaml.org/wiki/PyYAML">PyYAML</a> does not come in standard library.</p>
+
+            </div>
+
+        </div>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17075003-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    </body> 
+</html> 

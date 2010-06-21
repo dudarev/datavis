@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+    <head> 
+        <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+        <title>Pareto Principle in Texts</title> 
+        <link type="image/x-icon" href="/favicon.ico" rel= "shortcut icon" /> 
+        <link rel="stylesheet" href="screen.css" type="text/css" media="screen, projection">
+        <link rel="stylesheet" href="print.css" type="text/css" media="print">
+        <!--[if lt IE 8]><link rel="stylesheet" href="ie.css" type="text/css" media="screen, projection"><![endif]-->
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <link rel="stylesheet" type="text/css" href="writings.css" />
+    </head> 
+ 
+    <body id="index" class="home"> 
+
+        <div id="navigation">
+            <div class="navigation-container">
+            <a href="/datavis">Simple Data Visulization</a>: <span class="title">Pareto Principle in Texts</span>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <h1> Pareto Principle in Texts</h1>
+
+            <div id="abstract">
+            
+            </div>
+            
+            <div class="span-16" id="content">
+            <div align="center" class="align-center"><img alt="&lt;http://1.bp.blogspot.com/_rZy4zSAOlB8/SrSlYqKUqHI/AAAAAAAABNM/kv8_jLFJH-U/s1600-h/fraction.png&gt;`_" class="align-center" src="http://1.bp.blogspot.com/_rZy4zSAOlB8/SrSlYqKUqHI/AAAAAAAABNM/kv8_jLFJH-U/s320/fraction.png" /></div>
+<p>A couple years ago I did a small project that would allow a language learner to estimate a fraction of text she would understand by answering which words she knows and which does not. The idea was to split all the words in the text into groups, so that each group is met a given fraction of times in the text. To be specific, at the time the groups were chosen so that each group corresponds to <tt class="docutils literal">10%</tt> of all text. Further details of the testing algorithm may be found in a <a class="reference external" href="http://dudarev.com/english_test/">small essay in Russian</a> .</p>
+<p>It was surprising to see how well <a class="reference external" href="http://en.wikipedia.org/wiki/Pareto_principle">Pareto principle</a> works with words. As it is stated in the Wikipedia article, the essence of Pareto's observation is that:</p>
+<blockquote>
+for many events, roughly <tt class="docutils literal">80%</tt> of the effects come from <tt class="docutils literal">20%</tt> of the causes.</blockquote>
+<p>As the graph above shows, this rule works remarkably well for words in a text too. That particular example shows a fraction of text contributed by a fraction of unique words for Lewis Carroll's &quot; <a class="reference external" href="http://www.gutenberg.org/etext/11">Alice's Adventures in Wonderland</a> &quot;.</p>
+<p><a class="reference external" href="http://github.com/dudarev/datavis/tree/c38d3c5232d97eea4bf9836b3f8cb9672663d77a/002_pareto_in_words">The code</a> for this post consists of two scripts. The first <a class="reference external" href="http://github.com/dudarev/datavis/blob/c38d3c5232d97eea4bf9836b3f8cb9672663d77a/002_pareto_in_words/word_count_list.py">sorts words</a> in the text by frequency, while the second does <a class="reference external" href="http://github.com/dudarev/datavis/blob/c38d3c5232d97eea4bf9836b3f8cb9672663d77a/002_pareto_in_words/chart.py">plotting</a> and also finds a number <tt class="docutils literal">x</tt> such that <tt class="docutils literal">x%</tt> of words are responsible for <tt class="docutils literal">(100 - x)%</tt> of the text. For Carroll's book this number is <tt class="docutils literal">17%</tt>.</p>
+
+            </div>
+
+        </div>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17075003-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    </body> 
+</html> 

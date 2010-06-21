@@ -1,78 +1,80 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+    <head> 
+        <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+        <title>Simple Data Visualization</title> 
+        <link type="image/x-icon" href="/favicon.ico" rel= "shortcut icon" /> 
+        <link rel="stylesheet" href="screen.css" type="text/css" media="screen, projection">
+        <link rel="stylesheet" href="print.css" type="text/css" media="print">
+        <!--[if lt IE 8]><link rel="stylesheet" href="ie.css" type="text/css" media="screen, projection"><![endif]-->
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+    </head> 
+ 
+    <body id="index" class="home"> 
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <div id="navigation">
+            <div class="navigation-container">
+            <a href="/datavis">Simple Data Visulization</a>
+            </div>
+        </div>
+       
+        <div class="container">
+        
+            
+            <div class="span-16" id="content">
+                <h2><a href="./003-when-followers-tweet.html">When Followers Tweet</a></h2>
+                <div align="center" class="align-center"><img alt="&lt;http://4.bp.blogspot.com/_rZy4zSAOlB8/SyjEdL79EEI/AAAAAAAABTA/GVT_efUXYqk/s1600-h/003_izba4i.png&gt;`_" class="align-center" src="http://4.bp.blogspot.com/_rZy4zSAOlB8/SyjEdL79EEI/AAAAAAAABTA/GVT_efUXYqk/s320/003_izba4i.png" /></div>
+<p>One of the goals of <a class="reference external" href="http://www.tweetingplaces.com/">TweetingPlaces</a> is to help small local businesses to connect to their customers. One of the ways for them to increase exposure on Twitter may be to schedule tweets of non-immediate importance to times when the message may be seen by most of the followers. The plot above shows activity of followers on Twitter. It may help to get some insights on when to schedule tweets. Still, the best metric can be provided by direct measurements of the reactions on tweets posted at different times.</p>
+<p>The plot is for a coffee shop &quot;<a class="reference external" href="http://www.izba4i.com/">Изба-читальня</a>&quot; in Donetsk, Ukraine (during winter in UTC +2 timezone). Its tweets can be found at <a class="reference external" href="http://twitter.com/izba4i">&#64;izba4i</a> . Most of its followers are Donetsk locals and tweet from 9 a.m. till 11 p.m. of local time with peak around 1 p.m. (lunch time).</p>
+<p>The focus of <a class="reference external" href="http://www.tweetingplaces.com/">TweetingPlaces</a> is global, and scheduling tweets at particular times may be not a good strategy, but out of curiosity here is a plot for <a class="reference external" href="http://twitter.com/tweetingplaces">&#64;tweetingplaces</a> followers:</p>
+<div align="center" class="align-center"><img alt="&lt;http://3.bp.blogspot.com/_rZy4zSAOlB8/SyjHlbzPZsI/AAAAAAAABTI/LQcLlFiajIk/s1600-h/003_tweetingplaces.png&gt;`_" class="align-center" src="http://3.bp.blogspot.com/_rZy4zSAOlB8/SyjHlbzPZsI/AAAAAAAABTI/LQcLlFiajIk/s320/003_tweetingplaces.png" /></div>
+<p>The minimum is much less pronounced and the followers start tweeting more than average after 8 a.m. Eastern Time.</p>
+<p><a class="reference external" href="http://github.com/dudarev/datavis/tree/master/003_twitter_time_of_day/">The code</a> for these plots is available at github. In addition to <a class="reference external" href="http://matplotlib.sourceforge.net/">Matplotlib</a> that has been used in all the previous examples, <a class="reference external" href="http://code.google.com/p/tweepy/">tweepy</a> library is used to interact with Twitter API (note that you may have to limit number of requests per hour if many of them have to be made). Also, <a class="reference external" href="http://pyyaml.org/wiki/PyYAML">PyYAML</a> does not come in standard library.</p>
 
-	<title>dudarev/datavis @ GitHub</title>
-	
-	<style type="text/css">
-		body {
-  		margin-top: 1.0em;
-  		background-color: #079a68;
-		  font-family: "Helvetica,Arial,FreeSans"; 
-  		color: #ffffff;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-		h1 { font-size: 3.8em; color: #f86597; margin-bottom: 3px; }
-		h1 .small { font-size: 0.4em; }
-		h1 a { text-decoration: none }
-		h2 { font-size: 1.5em; color: #f86597; }
-    h3 { text-align: center; color: #f86597; }
-    a { color: #f86597; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-		pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-	</style>
-	
-</head>
+            </div>
+            
+        
+            
+            <div class="span-16" id="content">
+                <h2><a href="./002-pareto-principle-in-texts.html">Pareto Principle in Texts</a></h2>
+                <div align="center" class="align-center"><img alt="&lt;http://1.bp.blogspot.com/_rZy4zSAOlB8/SrSlYqKUqHI/AAAAAAAABNM/kv8_jLFJH-U/s1600-h/fraction.png&gt;`_" class="align-center" src="http://1.bp.blogspot.com/_rZy4zSAOlB8/SrSlYqKUqHI/AAAAAAAABNM/kv8_jLFJH-U/s320/fraction.png" /></div>
+<p>A couple years ago I did a small project that would allow a language learner to estimate a fraction of text she would understand by answering which words she knows and which does not. The idea was to split all the words in the text into groups, so that each group is met a given fraction of times in the text. To be specific, at the time the groups were chosen so that each group corresponds to <tt class="docutils literal">10%</tt> of all text. Further details of the testing algorithm may be found in a <a class="reference external" href="http://dudarev.com/english_test/">small essay in Russian</a> .</p>
+<p>It was surprising to see how well <a class="reference external" href="http://en.wikipedia.org/wiki/Pareto_principle">Pareto principle</a> works with words. As it is stated in the Wikipedia article, the essence of Pareto's observation is that:</p>
+<blockquote>
+for many events, roughly <tt class="docutils literal">80%</tt> of the effects come from <tt class="docutils literal">20%</tt> of the causes.</blockquote>
+<p>As the graph above shows, this rule works remarkably well for words in a text too. That particular example shows a fraction of text contributed by a fraction of unique words for Lewis Carroll's &quot; <a class="reference external" href="http://www.gutenberg.org/etext/11">Alice's Adventures in Wonderland</a> &quot;.</p>
+<p><a class="reference external" href="http://github.com/dudarev/datavis/tree/c38d3c5232d97eea4bf9836b3f8cb9672663d77a/002_pareto_in_words">The code</a> for this post consists of two scripts. The first <a class="reference external" href="http://github.com/dudarev/datavis/blob/c38d3c5232d97eea4bf9836b3f8cb9672663d77a/002_pareto_in_words/word_count_list.py">sorts words</a> in the text by frequency, while the second does <a class="reference external" href="http://github.com/dudarev/datavis/blob/c38d3c5232d97eea4bf9836b3f8cb9672663d77a/002_pareto_in_words/chart.py">plotting</a> and also finds a number <tt class="docutils literal">x</tt> such that <tt class="docutils literal">x%</tt> of words are responsible for <tt class="docutils literal">(100 - x)%</tt> of the text. For Carroll's book this number is <tt class="docutils literal">17%</tt>.</p>
 
-<body>
-  <a href="http://github.com/dudarev/datavis"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-  
-  <div id="container">
+            </div>
+            
+        
+            
+            <div class="span-16" id="content">
+                <h2><a href="./001-simple-bar.html">Bar Histogram</a></h2>
+                <div align="center" class="align-center"><img alt="alternate text" class="align-center" src="001_simple_bar.png" /></div>
+<p>Sometimes a big task requires many small steps to be completed. When planning, I split it into such steps that are clear how to complete in short time intervals. Timing each step may bring good dynamics into work, and sometimes signals that a step should be further divided. I was curious to see a visual representation of actual time intervals to complete a recent sequence of such steps.</p>
+<p>A simple bar histogram seemed sufficient to satisfy this curiosity. <a class="reference external" href="http://matplotlib.sourceforge.net/">Matplotlib</a> Python library was helpful as always. Some insight could be gained even from such a simple visualization. For instance, in that particular task, after some time, steps were taking longer (maybe it was a natural point to take a break? or may be a point to re-plan the further steps?).</p>
+<p>The code of this example is available at <a class="reference external" href="http://github.com/dudarev/datavis/blob/master/001_simple_bar/time_intervals.py">github</a>.</p>
 
-    <div class="download">
-      <a href="http://github.com/dudarev/datavis/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/dudarev/datavis/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
-    </div>
-      
-    <h1><a href="http://github.com/dudarev/datavis">datavis</a> 
-      <span class="small">by <a href="http://github.com/dudarev">dudarev</a></span></h1>
+            </div>
+            
+        
+        </div>
 
-    <div class="description">
-      Simple data visualization examples.
-    </div>
+<script type="text/javascript">
 
-    <h2>Contact</h2>
-<p> (dudarev@gmail.com)<br/>      </p>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17075003-1']);
+  _gaq.push(['_trackPageview']);
 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
 
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/dudarev/datavis/zipball/master">zip</a> or
-      <a href="http://github.com/dudarev/datavis/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/dudarev/datavis</pre>
-    </p>
-      
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/dudarev/datavis">dudarev/datavis</a>
-    </div>
-    
-  </div>
+</script>
 
-  
-</body>
-</html>
+    </body> 
+</html> 
