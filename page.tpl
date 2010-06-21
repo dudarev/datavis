@@ -16,7 +16,7 @@
 
         <div id="navigation">
             <div class="navigation-container">
-            <a href="/datavis">Simple Data Visulization</a>: <span class="title">{{page.title}}</span>
+            <a href="/datavis">Simple Data Visualization</a>: <span class="title">{{page.title}}</span>
             </div>
         </div>
 
