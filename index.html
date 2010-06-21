@@ -15,7 +15,7 @@
 
         <div id="navigation">
             <div class="navigation-container">
-            <a href="/datavis">Simple Data Visulization</a>
+            <a href="/datavis">Simple Data Visualization</a>
             </div>
         </div>
        
