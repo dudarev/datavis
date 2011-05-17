@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+    <head> 
+        <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+        <title>Cities Rank-Size Distribution</title> 
+        <link type="image/x-icon" href="/favicon.ico" rel= "shortcut icon" /> 
+        <link rel="stylesheet" href="screen.css" type="text/css" media="screen, projection">
+        <link rel="stylesheet" href="print.css" type="text/css" media="print">
+        <!--[if lt IE 8]><link rel="stylesheet" href="ie.css" type="text/css" media="screen, projection"><![endif]-->
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <link rel="stylesheet" type="text/css" href="writings.css" />
+    </head> 
+ 
+    <body id="index" class="home"> 
+
+        <div id="navigation">
+            <div class="navigation-container">
+            <a href="/datavis">Simple Data Visualization</a>: <span class="title">Cities Rank-Size Distribution</span>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <h1> Cities Rank-Size Distribution</h1>
+
+            <div id="abstract">
+            
+            </div>
+            
+            <div class="span-16" id="content">
+            <p>If to scale an information service to <tt class="docutils literal">1,000</tt> cities what kind of cities will be covered? Or a reverse questions: how many cities have population of more than <tt class="docutils literal">1,000,000</tt>?</p>
+<p>The answers can be found from <a class="reference external" href="http://www.geonames.org/">geonames.org</a> <a class="reference external" href="http://download.geonames.org/export/dump/">data</a> just with a couple of lines of Python code:</p>
+<blockquote>
+more than <tt class="docutils literal">340</tt> cities have population more than <tt class="docutils literal">1,000,000</tt>; the city ranked 1,000th <em>in that data</em> has population of around <tt class="docutils literal">400,000</tt>.</blockquote>
+<p>This is curious to see how cities population is distributed. The plot below is for cumulative distribution of cities population.</p>
+<div align="center" class="align-center"><img alt="cumulative distribution of cities in dependence on population" class="align-center" src="006_distribution_hist.png" /></div>
+<p>The linear dependence in log-log plot is indication of <a class="reference external" href="http://en.wikipedia.org/wiki/Power_law">power law</a> dependence. At some population the distribution changes the slope. Below <tt class="docutils literal">1,000,000</tt> inhabitants the slope is almost <tt class="docutils literal"><span class="pre">-1</span></tt> which indicates <tt class="docutils literal">1/x</tt> dependence. Then it changes, and changes again at 7 million, and 10 million inhabitants. I would attribute changes at 1 and 10 million to psychology of regional and national governments that treat cities above and below this numbers differently.</p>
+<p>Typically, this dependence is plotted in the form of size (population) <em>vs.</em> rank.</p>
+<div align="center" class="align-center"><img alt="rank-size distribution of cities" class="align-center" src="006_rank_size.png" /></div>
+<p><a class="reference external" href="http://en.wikipedia.org/wiki/Rank-size_distribution">Rank-size distribution</a> of cities population was noticed more than half a century ago and is a subject of multiple research studies.</p>
+<p>The code to produce plots is available at github. This is fascinating to play with it: to see if the distribution is universal from a country to country (it's not for large populations), to come up with a simple interpolation formula that approximates it and so on. But, to keep the note brief, these exercises are for a truly curious reader.</p>
+
+            </div>
+
+        </div>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17075003-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    </body> 
+</html> 
