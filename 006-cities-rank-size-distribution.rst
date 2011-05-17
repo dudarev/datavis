@@ -17,7 +17,7 @@ This is curious to see how cities population is distributed. The plot below is f
    :alt: cumulative distribution of cities in dependence on population
    :align: center
 
-The linear dependence in a log-log plot is an indication of a `power law <http://en.wikipedia.org/wiki/Power_law>`__ dependence. At some population the distribution changes the slope. Below ``1,000,000`` inhabitants the slope is almost ``-1`` which indicates ``1/x`` dependence. Then it changes, and changes again at 7 million, and 10 million inhabitants. I would attribute changes at 1 and 10 million to psychology of regional and national governments that treat cities above and below this numbers differently.
+The linear dependence in a log-log plot is an indication of a `power law <http://en.wikipedia.org/wiki/Power_law>`__ dependence. At some population the distribution changes the slope. Below ``1,000,000`` inhabitants the slope is almost ``-1`` which indicates ``1/x`` dependence. Then it changes, and changes again at 7 million, and 10 million inhabitants. I would attribute changes at 1 and 10 million to psychology of regional and national governments that treat cities above and below these numbers differently.
 
 Typically, this dependence is plotted in the form of size (population) *vs.* rank. 
 
