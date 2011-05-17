@@ -1,0 +1,6 @@
+Plot distributions of cities populations.
+
+To run:
+    get_data.sh
+    python cities_distribution.py
+    python rank_size.py

@@ -6,3 +6,6 @@ scratch*
 003_twitter_time_of_day/data*
 003_twitter_time_of_day/config.yaml
 003_twitter_time_of_day/tweepy
+006_cities_population_distribution/cities15000.txt
+006_cities_population_distribution/cities15000.zip
+
