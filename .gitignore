@@ -8,4 +8,5 @@ scratch*
 003_twitter_time_of_day/tweepy
 006_cities_population_distribution/cities15000.txt
 006_cities_population_distribution/cities15000.zip
-
+007_pois_distribution/*.json
+007_pois_distribution/*.osm

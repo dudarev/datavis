@@ -1,0 +1,8 @@
+Plot clusters of POIs from OSM file.
+
+Download an OSM file. 
+Change file name in parse_pois.py.
+
+To run:
+    python parse_pois.py
+    python cluster_pois.py
