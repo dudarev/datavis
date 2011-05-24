@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+    <head> 
+        <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+        <title>Cluster OpenStreetMap POIs</title> 
+        <link type="image/x-icon" href="/favicon.ico" rel= "shortcut icon" /> 
+        <link rel="stylesheet" href="screen.css" type="text/css" media="screen, projection">
+        <link rel="stylesheet" href="print.css" type="text/css" media="print">
+        <!--[if lt IE 8]><link rel="stylesheet" href="ie.css" type="text/css" media="screen, projection"><![endif]-->
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <link rel="stylesheet" type="text/css" href="writings.css" />
+    </head> 
+ 
+    <body id="index" class="home"> 
+
+        <div id="navigation">
+            <div class="navigation-container">
+            <a href="/datavis">Simple Data Visualization</a>: <span class="title">Cluster OpenStreetMap POIs</span>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <h1> Cluster OpenStreetMap POIs</h1>
+
+            <div id="abstract">
+            
+            </div>
+            
+            <div class="span-16 last" id="content">
+            <div align="center" class="align-center"><img alt="cluster of openstreetmap POIs in Donetsk" class="align-center" src="007_pois_cluster.png" /></div>
+<p>In the first iteration of <a class="reference external" href="http://www.locopoly.com/">Locopoly</a> <a class="reference external" href="https://github.com/dudarev/locopoly/wiki/en%3ARules">rules</a> a player will randomly jump from one location to another within <tt class="docutils literal">1 km</tt>. Will it be possible to jump to every location in a city?</p>
+<p>This question can be reduced to a <a class="reference external" href="http://en.wikipedia.org/wiki/Hierarchical_clustering">hierarhical clustering</a> problem, one of the standard problems of <a class="reference external" href="http://en.wikipedia.org/wiki/Machine_learning">machine learning</a>. In general, the clusters can be calculated based on some <a class="reference external" href="http://en.wikipedia.org/wiki/Hierarchical_clustering#Linkage_criteria">linkage criteria</a>. For the formulated problem we need to use minimum or single-linkage clustering.</p>
+<p>The clustering is done based on various distances, not necessary in Euclidian space. Here, we parse POIs from an OpenStreetMap file and <a class="reference external" href="https://github.com/dudarev/datavis/blob/master/007_pois_distribution/parse_pois.py#L96">convert</a> them to <tt class="docutils literal">(x,y)</tt> grid neglecting curvature of the Earth.</p>
+<p>Any clustering libraries may be used. We use <a class="reference external" href="https://mlpy.fbk.eu/">mlpy</a>, <a class="reference external" href="http://code.google.com/p/scipy-cluster/">scipy-cluster</a> also seems to be interesting.</p>
+<p>For jumping distance of <tt class="docutils literal">1 km</tt> several clusters are formed in Donetsk at the moment. The city was formed from many settlement and modern POIs distribution is a good indication of history. Still, all this clusters will be connected in the future when more places are mapped.</p>
+<div align="center" class="align-center"><img alt="number of POIs in each cluster" class="align-center" src="007_clusters_numbers.png" /></div>
+<p>The largest cluster has more than <tt class="docutils literal">450</tt> spots—a good initial playground.</p>
+<p><a class="reference external" href="https://github.com/dudarev/datavis/tree/master/007_pois_distribution">The code is available at Github</a>. It is good to reference:</p>
+<ul class="simple">
+<li>GIS<ul>
+<li>parsing OSM file with cElementTree<ul>
+<li>choosing only POIs with <tt class="docutils literal">name</tt> key</li>
+</ul>
+</li>
+<li>converting lat,lon to x,y</li>
+</ul>
+</li>
+<li>mlpy (machine learning)<ul>
+<li>hierarhical clustering</li>
+</ul>
+</li>
+<li>Matplotlib<ul>
+<li>scatter plot</li>
+<li>bar plot with colors</li>
+<li>getting colors from cmap</li>
+</ul>
+</li>
+<li>Python<ul>
+<li>truncation of text</li>
+</ul>
+</li>
+</ul>
+
+            </div>
+
+            <div class="span-16 last" id="comments">
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'dudarevgithub'; // required: replace example with your forum shortname
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+    // var disqus_identifier = 'unique_dynamic_id_1234';
+    // var disqus_url = 'http://example.com/permalink-to-page.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+
+        </div><!-- container -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17075003-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    </body> 
+</html> 
