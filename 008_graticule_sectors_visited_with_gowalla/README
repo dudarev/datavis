@@ -43,3 +43,7 @@ Debug mode (only 10 points):
 
     ./get_data.sh
     python select_cities_over_1M.py
+
+6. Plot maps.
+
+    python plot_map.py
