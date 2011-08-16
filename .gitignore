@@ -18,3 +18,6 @@ temp*
 008_graticule_sectors_visited_with_gowalla/*.dbf
 008_graticule_sectors_visited_with_gowalla/*.shp
 008_graticule_sectors_visited_with_gowalla/*.shx
+008_graticule_sectors_visited_with_gowalla/cities15000.txt
+008_graticule_sectors_visited_with_gowalla/cities15000.zip
+008_graticule_sectors_visited_with_gowalla/cities_over_1M.txt

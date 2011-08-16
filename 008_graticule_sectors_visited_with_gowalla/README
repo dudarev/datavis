@@ -38,3 +38,8 @@ Debug mode (only 10 points):
 4. Create file with visited sectors.
 
     python create_shapefiles.py
+
+5. All cities with population more than 1M are plotted. Data is obtained from geonames.org
+
+    ./get_data.sh
+    python select_cities_over_1M.py
