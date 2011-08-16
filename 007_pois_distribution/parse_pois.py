@@ -28,11 +28,15 @@ def update_min(lat, lon, lat_min, lon_min):
         lon_min = lon
     return lat_min, lon_min
 
+users_dict = {}
+
 for event, elem in etree.iterparse(data):
     
     if elem.tag == 'node':
         tags = elem.findall('tag')
         id = elem.attrib['id']
+        user = elem.attrib['user']
+        users_dict[user] = users_dict.get(user, 0) + 1
         # all nodes are in dict because they are referenced in ways later
         nodes_dict[id] = elem
         if tags:
@@ -112,3 +116,11 @@ for p in pois:
 f = open("pois_xy.json", 'w')
 f.write(json.dumps(pois))
 f.close()
+
+users_list = [[users_dict[user],user] for user in users_dict]
+users_list.sort(reverse=True)
+
+user_url = "http://www.openstreetmap.org/user/"
+
+for u in users_list:
+    print u[0], "%s%s" % (user_url, u[1])

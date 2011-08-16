@@ -3,6 +3,7 @@
 *.pyc
 002_pareto_in_words/*.txt
 scratch*
+temp*
 003_twitter_time_of_day/data*
 003_twitter_time_of_day/config.yaml
 003_twitter_time_of_day/tweepy
