@@ -1,0 +1,1307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:xal="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0">
+    <Document id="feat_1">
+        <visibility>1</visibility>
+        <open>0</open>
+        <Placemark id="feat_2">
+            <Point id="geom_0">
+                <extrude>0</extrude>
+                <coordinates>37.410359441,55.9808009655,0.0</coordinates>
+            </Point>
+            <name>Terminal C Sheremetyevo Airport (SVO)</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/1158934'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_3">
+            <Point id="geom_1">
+                <extrude>0</extrude>
+                <coordinates>37.4126511811,55.9734930601,0.0</coordinates>
+            </Point>
+            <name>SVO Sheremetyevo International</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/164045'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_4">
+            <Point id="geom_2">
+                <extrude>0</extrude>
+                <coordinates>30.2809891507,59.8031851449,0.0</coordinates>
+            </Point>
+            <name>LED Pulkovo Airport</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/608338'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_5">
+            <Point id="geom_3">
+                <extrude>0</extrude>
+                <coordinates>20.585362733,54.883120383,0.0</coordinates>
+            </Point>
+            <name>KGD Khrabrovo Airport</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/1311701'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_6">
+            <Point id="geom_4">
+                <extrude>0</extrude>
+                <coordinates>20.501583348,54.718548785,0.0</coordinates>
+            </Point>
+            <name>Gelateria Italiano</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/4398634'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_7">
+            <Point id="geom_5">
+                <extrude>0</extrude>
+                <coordinates>20.51027298,54.706821444,0.0</coordinates>
+            </Point>
+            <name>Кафедральный Собор</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/7037857'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_8">
+            <Point id="geom_6">
+                <extrude>0</extrude>
+                <coordinates>20.5056858,54.7090332,0.0</coordinates>
+            </Point>
+            <name>Kaliningrad Plaza</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/7702132'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_9">
+            <Point id="geom_7">
+                <extrude>0</extrude>
+                <coordinates>20.49921816,54.72062063,0.0</coordinates>
+            </Point>
+            <name>Evropa Trade Center</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/1288955'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_10">
+            <Point id="geom_8">
+                <extrude>0</extrude>
+                <coordinates>20.16552265,54.94289875,0.0</coordinates>
+            </Point>
+            <name>Cronwell Resort Falke</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/7695804'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_11">
+            <Point id="geom_9">
+                <extrude>0</extrude>
+                <coordinates>37.8626424333,55.6826807333,0.0</coordinates>
+            </Point>
+            <name>Перекресток</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/7692724'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_12">
+            <Point id="geom_10">
+                <extrude>0</extrude>
+                <coordinates>37.81109363,48.02000811,0.0</coordinates>
+            </Point>
+            <name>Shakhtar Fan Shop</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/7685006'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_13">
+            <Point id="geom_11">
+                <extrude>0</extrude>
+                <coordinates>37.831265,48.001604,0.0</coordinates>
+            </Point>
+            <name>Попугай</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/6662382'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_14">
+            <Point id="geom_12">
+                <extrude>0</extrude>
+                <coordinates>37.8013480143,48.003211809,0.0</coordinates>
+            </Point>
+            <name>Фонтан</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/7672754'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_15">
+            <Point id="geom_13">
+                <extrude>0</extrude>
+                <coordinates>37.80123798,48.0000513,0.0</coordinates>
+            </Point>
+            <name>Магазин Шахтер</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/7672638'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_16">
+            <Point id="geom_14">
+                <extrude>0</extrude>
+                <coordinates>37.805933,47.992872,0.0</coordinates>
+            </Point>
+            <name>Green Plaza</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/2857686'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_17">
+            <Point id="geom_15">
+                <extrude>0</extrude>
+                <coordinates>37.802925,48.006691,0.0</coordinates>
+            </Point>
+            <name>Cafe &quot;CherryPizza&quot;</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/6393547'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_18">
+            <Point id="geom_16">
+                <extrude>0</extrude>
+                <coordinates>35.1460361481,47.8061796526,0.0</coordinates>
+            </Point>
+            <name>Khortitza Flood Plains</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/1348020'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_19">
+            <Point id="geom_17">
+                <extrude>0</extrude>
+                <coordinates>35.113755054,47.813278521,0.0</coordinates>
+            </Point>
+            <name>Скифский Стан</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/3076009'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_20">
+            <Point id="geom_18">
+                <extrude>0</extrude>
+                <coordinates>35.076931847,47.853293448,0.0</coordinates>
+            </Point>
+            <name>Три Мачты</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/3094683'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_21">
+            <Point id="geom_19">
+                <extrude>0</extrude>
+                <coordinates>35.073671461,47.857300198,0.0</coordinates>
+            </Point>
+            <name>Zaporizhzhska Sich</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/3092861'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_22">
+            <Point id="geom_20">
+                <extrude>0</extrude>
+                <coordinates>35.0766849518,47.8588714318,0.0</coordinates>
+            </Point>
+            <name>Sich Gate</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/1263906'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_23">
+            <Point id="geom_21">
+                <extrude>0</extrude>
+                <coordinates>35.071544286,47.860499511,0.0</coordinates>
+            </Point>
+            <name>Музей Истории Запорожского Козатства</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/3090562'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_24">
+            <Point id="geom_22">
+                <extrude>0</extrude>
+                <coordinates>35.1614427567,47.8073614105,0.0</coordinates>
+            </Point>
+            <name>River Port</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/912173'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_25">
+            <Point id="geom_23">
+                <extrude>0</extrude>
+                <coordinates>35.1702296734,47.8071524431,0.0</coordinates>
+            </Point>
+            <name>White Bridge in Dubovka</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/660568'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_26">
+            <Point id="geom_24">
+                <extrude>0</extrude>
+                <coordinates>35.1809048653,47.8147972213,0.0</coordinates>
+            </Point>
+            <name>O Cacao</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/1557933'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_27">
+            <Point id="geom_25">
+                <extrude>0</extrude>
+                <coordinates>35.1161777973,47.8508731596,0.0</coordinates>
+            </Point>
+            <name>Lovers Clock</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/685125'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_28">
+            <Point id="geom_26">
+                <extrude>0</extrude>
+                <coordinates>37.08437943,46.89099914,0.0</coordinates>
+            </Point>
+            <name>Пляж</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/7595323'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_29">
+            <Point id="geom_27">
+                <extrude>0</extrude>
+                <coordinates>37.8020887816,48.0028617592,0.0</coordinates>
+            </Point>
+            <name>Книги для всей семьи</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/7584983'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_30">
+            <Point id="geom_28">
+                <extrude>0</extrude>
+                <coordinates>37.802131176,48.0138555518,0.0</coordinates>
+            </Point>
+            <name>John James Hughes Monument</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/4964319'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_31">
+            <Point id="geom_29">
+                <extrude>0</extrude>
+                <coordinates>37.802131176,48.0138555518,0.0</coordinates>
+            </Point>
+            <name>John James Hughes Monument</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/4964319'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_32">
+            <Point id="geom_30">
+                <extrude>0</extrude>
+                <coordinates>37.8047493465,48.0164152952,0.0</coordinates>
+            </Point>
+            <name>Белый лебедь</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/6393628'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_33">
+            <Point id="geom_31">
+                <extrude>0</extrude>
+                <coordinates>37.8037638093,48.0130867018,0.0</coordinates>
+            </Point>
+            <name>Kristy</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/7577415'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_34">
+            <Point id="geom_32">
+                <extrude>0</extrude>
+                <coordinates>37.7880330529,48.0310104087,0.0</coordinates>
+            </Point>
+            <name>Япона Хата</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/6471549'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_35">
+            <Point id="geom_33">
+                <extrude>0</extrude>
+                <coordinates>37.8048346346,48.00783281,0.0</coordinates>
+            </Point>
+            <name>Maxim</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/7526496'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_36">
+            <Point id="geom_34">
+                <extrude>0</extrude>
+                <coordinates>37.8376879962,47.9929711015,0.0</coordinates>
+            </Point>
+            <name>7 Квартал</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/7511935'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_37">
+            <Point id="geom_35">
+                <extrude>0</extrude>
+                <coordinates>37.82462831,48.00264417,0.0</coordinates>
+            </Point>
+            <name>Больница им. Калинина</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/7480840'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_38">
+            <Point id="geom_36">
+                <extrude>0</extrude>
+                <coordinates>37.7680585852,47.9444345554,0.0</coordinates>
+            </Point>
+            <name>Брусниця</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/7479303'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_39">
+            <Point id="geom_37">
+                <extrude>0</extrude>
+                <coordinates>37.799769838,48.015974176,0.0</coordinates>
+            </Point>
+            <name>Парк Кованных Фигур</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/4325582'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_40">
+            <Point id="geom_38">
+                <extrude>0</extrude>
+                <coordinates>37.8382229805,47.9647697981,0.0</coordinates>
+            </Point>
+            <name>Instalacia</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/4798754'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_41">
+            <Point id="geom_39">
+                <extrude>0</extrude>
+                <coordinates>37.8154583833,48.0210737167,0.0</coordinates>
+            </Point>
+            <name>Твоим освободителям, Донбасс!</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/1067869'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_42">
+            <Point id="geom_40">
+                <extrude>0</extrude>
+                <coordinates>37.8183665921,48.0207612967,0.0</coordinates>
+            </Point>
+            <name>Музыкальный парк</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/7411156'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_43">
+            <Point id="geom_41">
+                <extrude>0</extrude>
+                <coordinates>37.8152105212,48.0196682312,0.0</coordinates>
+            </Point>
+            <name>Парк гостиницы Виктория</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/7411137'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_44">
+            <Point id="geom_42">
+                <extrude>0</extrude>
+                <coordinates>37.79692337,47.97400184,0.0</coordinates>
+            </Point>
+            <name>Рынок &quot;Соловки&quot;</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/7410437'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_45">
+            <Point id="geom_43">
+                <extrude>0</extrude>
+                <coordinates>37.80070716,48.00411505,0.0</coordinates>
+            </Point>
+            <name>La Petite France</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/7381858'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_46">
+            <Point id="geom_44">
+                <extrude>0</extrude>
+                <coordinates>37.8037792128,48.0083953748,0.0</coordinates>
+            </Point>
+            <name>Идея</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/7374877'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_47">
+            <Point id="geom_45">
+                <extrude>0</extrude>
+                <coordinates>37.8449801644,48.0031145567,0.0</coordinates>
+            </Point>
+            <name>Solo</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/7374551'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_48">
+            <Point id="geom_46">
+                <extrude>0</extrude>
+                <coordinates>37.8003665,48.0113683,0.0</coordinates>
+            </Point>
+            <name>Celentano Pizza</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/3387216'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_49">
+            <Point id="geom_47">
+                <extrude>0</extrude>
+                <coordinates>37.8048563004,48.0024212209,0.0</coordinates>
+            </Point>
+            <name>Lenin Monument</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/1329551'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_50">
+            <Point id="geom_48">
+                <extrude>0</extrude>
+                <coordinates>37.8319197893,48.0013650656,0.0</coordinates>
+            </Point>
+            <name>Amstor</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/6067210'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_51">
+            <Point id="geom_49">
+                <extrude>0</extrude>
+                <coordinates>37.8021155701,48.0028094273,0.0</coordinates>
+            </Point>
+            <name>Matrix</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/7250560'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_52">
+            <Point id="geom_50">
+                <extrude>0</extrude>
+                <coordinates>37.7762162801,48.0512883091,0.0</coordinates>
+            </Point>
+            <name>В гостях у Швейка</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/7238149'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_53">
+            <Point id="geom_51">
+                <extrude>0</extrude>
+                <coordinates>37.7690273523,47.9731160402,0.0</coordinates>
+            </Point>
+            <name>АТЛ</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/6501443'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_54">
+            <Point id="geom_52">
+                <extrude>0</extrude>
+                <coordinates>37.6875810732,47.9490902857,0.0</coordinates>
+            </Point>
+            <name>Рынок &quot;Текстильщик&quot;</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/7190262'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_55">
+            <Point id="geom_53">
+                <extrude>0</extrude>
+                <coordinates>37.80425041,47.99631647,0.0</coordinates>
+            </Point>
+            <name>Эридан</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/7166887'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_56">
+            <Point id="geom_54">
+                <extrude>0</extrude>
+                <coordinates>37.8109624131,47.9960346465,0.0</coordinates>
+            </Point>
+            <name>Брусниця</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/7152113'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_57">
+            <Point id="geom_55">
+                <extrude>0</extrude>
+                <coordinates>37.76500308,47.94463071,0.0</coordinates>
+            </Point>
+            <name>Aquarius</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/7152006'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_58">
+            <Point id="geom_56">
+                <extrude>0</extrude>
+                <coordinates>37.7666294575,47.9599624872,0.0</coordinates>
+            </Point>
+            <name>Hospital 26</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/1252865'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_59">
+            <Point id="geom_57">
+                <extrude>0</extrude>
+                <coordinates>37.8024567116,48.0120735104,0.0</coordinates>
+            </Point>
+            <name>Thomas English</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/7134294'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_60">
+            <Point id="geom_58">
+                <extrude>0</extrude>
+                <coordinates>37.8341139564,48.007417375,0.0</coordinates>
+            </Point>
+            <name>Leif</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/7131041'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_61">
+            <Point id="geom_59">
+                <extrude>0</extrude>
+                <coordinates>37.8060881693,48.0000699668,0.0</coordinates>
+            </Point>
+            <name>Scorini</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/7104986'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_62">
+            <Point id="geom_60">
+                <extrude>0</extrude>
+                <coordinates>37.811890422,47.9724586565,0.0</coordinates>
+            </Point>
+            <name>Больница №6 &quot;Шлаколечебница&quot;</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/6908729'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_63">
+            <Point id="geom_61">
+                <extrude>0</extrude>
+                <coordinates>37.804922,48.000032,0.0</coordinates>
+            </Point>
+            <name>Main post office</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/6625946'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_64">
+            <Point id="geom_62">
+                <extrude>0</extrude>
+                <coordinates>37.7987315423,48.0025600742,0.0</coordinates>
+            </Point>
+            <name>Аптека на бульваре</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/6857910'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_65">
+            <Point id="geom_63">
+                <extrude>0</extrude>
+                <coordinates>37.8125607302,48.0092921695,0.0</coordinates>
+            </Point>
+            <name>Китайская семья</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/6754044'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_66">
+            <Point id="geom_64">
+                <extrude>0</extrude>
+                <coordinates>37.8004842997,48.0051147938,0.0</coordinates>
+            </Point>
+            <name>Chelentano Pizza</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/735195'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_67">
+            <Point id="geom_65">
+                <extrude>0</extrude>
+                <coordinates>37.800822258,48.0066651106,0.0</coordinates>
+            </Point>
+            <name>Вертикаль</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/6580680'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_68">
+            <Point id="geom_66">
+                <extrude>0</extrude>
+                <coordinates>37.753406167,48.0348175764,0.0</coordinates>
+            </Point>
+            <name>Amstor Kujbysheva</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/932716'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_69">
+            <Point id="geom_67">
+                <extrude>0</extrude>
+                <coordinates>37.8105854988,48.0094707012,0.0</coordinates>
+            </Point>
+            <name>McDonald's &quot;Krytyj Rynok&quot;</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/4211710'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_70">
+            <Point id="geom_68">
+                <extrude>0</extrude>
+                <coordinates>37.7749818564,47.9584286504,0.0</coordinates>
+            </Point>
+            <name>Рынок &quot;Мирный&quot;</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/6500484'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_71">
+            <Point id="geom_69">
+                <extrude>0</extrude>
+                <coordinates>37.8074974251,47.9997781263,0.0</coordinates>
+            </Point>
+            <name>Шато</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/6463307'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_72">
+            <Point id="geom_70">
+                <extrude>0</extrude>
+                <coordinates>37.6800745726,47.7769500017,0.0</coordinates>
+            </Point>
+            <name>Церковь</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/6454632'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_73">
+            <Point id="geom_71">
+                <extrude>0</extrude>
+                <coordinates>30.4892706871,50.4411352697,0.0</coordinates>
+            </Point>
+            <name>Вокзал</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/3011278'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_74">
+            <Point id="geom_72">
+                <extrude>0</extrude>
+                <coordinates>30.5213874578,50.4420626163,0.0</coordinates>
+            </Point>
+            <name>Pinchuk Art Centre</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/4031333'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_75">
+            <Point id="geom_73">
+                <extrude>0</extrude>
+                <coordinates>30.52291786,50.442079,0.0</coordinates>
+            </Point>
+            <name>TGI Fridays</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/990584'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_76">
+            <Point id="geom_74">
+                <extrude>0</extrude>
+                <coordinates>30.513292551,50.4488421316,0.0</coordinates>
+            </Point>
+            <name>Zoloti vorota</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/2971522'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_77">
+            <Point id="geom_75">
+                <extrude>0</extrude>
+                <coordinates>30.522390604,50.463623768,0.0</coordinates>
+            </Point>
+            <name>Moleskine в Україні</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/2753265'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_78">
+            <Point id="geom_76">
+                <extrude>0</extrude>
+                <coordinates>30.5630179894,50.4265626104,0.0</coordinates>
+            </Point>
+            <name>Родина-мать</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/6417083'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_79">
+            <Point id="geom_77">
+                <extrude>0</extrude>
+                <coordinates>30.5194509029,50.4628315239,0.0</coordinates>
+            </Point>
+            <name>Пузата Хата</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/746812'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_80">
+            <Point id="geom_78">
+                <extrude>0</extrude>
+                <coordinates>37.8047060651,47.9926545799,0.0</coordinates>
+            </Point>
+            <name>Fashion Cake</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/6385957'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_81">
+            <Point id="geom_79">
+                <extrude>0</extrude>
+                <coordinates>37.7881379,48.0307637,0.0</coordinates>
+            </Point>
+            <name>Мультиплекс</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/6381387'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_82">
+            <Point id="geom_80">
+                <extrude>0</extrude>
+                <coordinates>37.799556255,48.013747896,0.0</coordinates>
+            </Point>
+            <name>Звездочка</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/1595766'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_83">
+            <Point id="geom_81">
+                <extrude>0</extrude>
+                <coordinates>37.77317,47.958519,0.0</coordinates>
+            </Point>
+            <name>Обжора &quot;Мирный&quot;</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/4780092'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_84">
+            <Point id="geom_82">
+                <extrude>0</extrude>
+                <coordinates>37.8006827831,48.0010931525,0.0</coordinates>
+            </Point>
+            <name>Птичкин Дом</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/5682830'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_85">
+            <Point id="geom_83">
+                <extrude>0</extrude>
+                <coordinates>37.8020560741,48.008422228,0.0</coordinates>
+            </Point>
+            <name>Художественный музей</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/5682026'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_86">
+            <Point id="geom_84">
+                <extrude>0</extrude>
+                <coordinates>34.1447675228,44.496871233,0.0</coordinates>
+            </Point>
+            <name>Велика Кишеня</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/5032931'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_87">
+            <Point id="geom_85">
+                <extrude>0</extrude>
+                <coordinates>37.7863490582,48.0325412404,0.0</coordinates>
+            </Point>
+            <name>Тануки</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/4488864'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_88">
+            <Point id="geom_86">
+                <extrude>0</extrude>
+                <coordinates>37.7895355225,47.9950051366,0.0</coordinates>
+            </Point>
+            <name>Sherbakova Park</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/4211746'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_89">
+            <Point id="geom_87">
+                <extrude>0</extrude>
+                <coordinates>37.802131176,48.0025576152,0.0</coordinates>
+            </Point>
+            <name>Віденські булочки</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/4170344'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_90">
+            <Point id="geom_88">
+                <extrude>0</extrude>
+                <coordinates>37.7968418598,48.024404757,0.0</coordinates>
+            </Point>
+            <name>Изба-читальня</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/3941817'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_91">
+            <Point id="geom_89">
+                <extrude>0</extrude>
+                <coordinates>37.8113043308,48.0190443082,0.0</coordinates>
+            </Point>
+            <name>Каменный мяч</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/3777168'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_92">
+            <Point id="geom_90">
+                <extrude>0</extrude>
+                <coordinates>37.7980649471,47.9911190271,0.0</coordinates>
+            </Point>
+            <name>МcDonalds &quot;Pivdennyi&quot;</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/2094056'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_93">
+            <Point id="geom_91">
+                <extrude>0</extrude>
+                <coordinates>37.7909678221,47.9919290543,0.0</coordinates>
+            </Point>
+            <name>Rosarium</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/1280571'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_94">
+            <Point id="geom_92">
+                <extrude>0</extrude>
+                <coordinates>37.8035902977,47.9921690821,0.0</coordinates>
+            </Point>
+            <name>Планетарий</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/3584800'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_95">
+            <Point id="geom_93">
+                <extrude>0</extrude>
+                <coordinates>37.8047704697,47.9970467091,0.0</coordinates>
+            </Point>
+            <name>Дом Кофе</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/2971948'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_96">
+            <Point id="geom_94">
+                <extrude>0</extrude>
+                <coordinates>37.8042447567,48.0000883341,0.0</coordinates>
+            </Point>
+            <name>Памятник Женщинам Донбасса</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/3453286'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_97">
+            <Point id="geom_95">
+                <extrude>0</extrude>
+                <coordinates>37.7824437618,48.0305467011,0.0</coordinates>
+            </Point>
+            <name>El Tiburon Salsa</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/2549180'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_98">
+            <Point id="geom_96">
+                <extrude>0</extrude>
+                <coordinates>37.7914345264,47.99084793,0.0</coordinates>
+            </Point>
+            <name>Амстор</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/2863726'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_99">
+            <Point id="geom_97">
+                <extrude>0</extrude>
+                <coordinates>37.8013399243,48.008014885,0.0</coordinates>
+            </Point>
+            <name>Пальма Мерцалова</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/2541280'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_100">
+            <Point id="geom_98">
+                <extrude>0</extrude>
+                <coordinates>37.8115081787,48.005766366,0.0</coordinates>
+            </Point>
+            <name>Ciklum</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/2539760'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_101">
+            <Point id="geom_99">
+                <extrude>0</extrude>
+                <coordinates>37.8037002683,48.006722851,0.0</coordinates>
+            </Point>
+            <name>Памятник Соловьяненко</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/2539390'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_102">
+            <Point id="geom_100">
+                <extrude>0</extrude>
+                <coordinates>37.8037619591,48.0052997815,0.0</coordinates>
+            </Point>
+            <name>Памятник Гринкевичу</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/2539320'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_103">
+            <Point id="geom_101">
+                <extrude>0</extrude>
+                <coordinates>37.8037887812,48.0048690844,0.0</coordinates>
+            </Point>
+            <name>Памятник Гурову</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/2539295'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_104">
+            <Point id="geom_102">
+                <extrude>0</extrude>
+                <coordinates>37.8005540371,47.9957733575,0.0</coordinates>
+            </Point>
+            <name>Памятник Стратонавтам</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/2311122'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_105">
+            <Point id="geom_103">
+                <extrude>0</extrude>
+                <coordinates>37.8059720993,48.0095276005,0.0</coordinates>
+            </Point>
+            <name>Юзовская пивоварня</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/2246731'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_106">
+            <Point id="geom_104">
+                <extrude>0</extrude>
+                <coordinates>37.804877758,48.0169487,0.0</coordinates>
+            </Point>
+            <name>Бум</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/2242556'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_107">
+            <Point id="geom_105">
+                <extrude>0</extrude>
+                <coordinates>37.8058004379,48.0150397538,0.0</coordinates>
+            </Point>
+            <name>Кинокульт</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/2035715'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_108">
+            <Point id="geom_106">
+                <extrude>0</extrude>
+                <coordinates>37.8036868572,48.0130004883,0.0</coordinates>
+            </Point>
+            <name>Форум</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/2035519'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_109">
+            <Point id="geom_107">
+                <extrude>0</extrude>
+                <coordinates>37.7983009815,47.9915311112,0.0</coordinates>
+            </Point>
+            <name>Golden Ring (Zolote Kilce)</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/727476'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_110">
+            <Point id="geom_108">
+                <extrude>0</extrude>
+                <coordinates>37.805609,48.002264,0.0</coordinates>
+            </Point>
+            <name>McDonald's &quot;Rubin&quot;</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/679649'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_111">
+            <Point id="geom_109">
+                <extrude>0</extrude>
+                <coordinates>37.7735549212,48.0363464355,0.0</coordinates>
+            </Point>
+            <name>Буклет</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/1751463'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_112">
+            <Point id="geom_110">
+                <extrude>0</extrude>
+                <coordinates>37.8017771244,48.0172358383,0.0</coordinates>
+            </Point>
+            <name>Памятник Артему</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/1744105'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_113">
+            <Point id="geom_111">
+                <extrude>0</extrude>
+                <coordinates>37.81011343,48.0210177645,0.0</coordinates>
+            </Point>
+            <name>Donbass Arena</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/1017119'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_114">
+            <Point id="geom_112">
+                <extrude>0</extrude>
+                <coordinates>37.8327083588,48.0080776914,0.0</coordinates>
+            </Point>
+            <name>Amstor</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/1585373'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_115">
+            <Point id="geom_113">
+                <extrude>0</extrude>
+                <coordinates>37.7463680506,48.0448544025,0.0</coordinates>
+            </Point>
+            <name>Donetsk Railway Station</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/745105'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_116">
+            <Point id="geom_114">
+                <extrude>0</extrude>
+                <coordinates>37.7454668283,48.0692303181,0.0</coordinates>
+            </Point>
+            <name>Donetsk Airport</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/1017539'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_117">
+            <Point id="geom_115">
+                <extrude>0</extrude>
+                <coordinates>37.8015625477,48.0019617849,0.0</coordinates>
+            </Point>
+            <name>Памятник Пушкину</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/1575352'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_118">
+            <Point id="geom_116">
+                <extrude>0</extrude>
+                <coordinates>37.7593713999,47.963835597,0.0</coordinates>
+            </Point>
+            <name>Край</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/1572907'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_119">
+            <Point id="geom_117">
+                <extrude>0</extrude>
+                <coordinates>37.7704596519,47.9684114456,0.0</coordinates>
+            </Point>
+            <name>Параллель</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/1566263'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_120">
+            <Point id="geom_118">
+                <extrude>0</extrude>
+                <coordinates>37.7880066633,48.0308408646,0.0</coordinates>
+            </Point>
+            <name>Donetsk City</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/1305433'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_121">
+            <Point id="geom_119">
+                <extrude>0</extrude>
+                <coordinates>37.8011789918,48.0049875265,0.0</coordinates>
+            </Point>
+            <name>Реки Донбасса</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/1541693'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_122">
+            <Point id="geom_120">
+                <extrude>0</extrude>
+                <coordinates>37.8034937382,48.0089103174,0.0</coordinates>
+            </Point>
+            <name>Памятник Шевченко</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/1535165'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_123">
+            <Point id="geom_121">
+                <extrude>0</extrude>
+                <coordinates>37.8020989895,48.0035195435,0.0</coordinates>
+            </Point>
+            <name>Обжора</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/1535018'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_124">
+            <Point id="geom_122">
+                <extrude>0</extrude>
+                <coordinates>37.8292429447,48.0010141852,0.0</coordinates>
+            </Point>
+            <name>Бочка</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/1521862'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_125">
+            <Point id="geom_123">
+                <extrude>0</extrude>
+                <coordinates>37.778377533,47.9464619934,0.0</coordinates>
+            </Point>
+            <name>Metro Cash and Carry</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/692679'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_126">
+            <Point id="geom_124">
+                <extrude>0</extrude>
+                <coordinates>37.780598402,48.0362000867,0.0</coordinates>
+            </Point>
+            <name>Зимний сад</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/1494813'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_127">
+            <Point id="geom_125">
+                <extrude>0</extrude>
+                <coordinates>37.8058648109,47.9908551103,0.0</coordinates>
+            </Point>
+            <name>Photo Lab Центр</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/1482396'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_128">
+            <Point id="geom_126">
+                <extrude>0</extrude>
+                <coordinates>37.7757704258,48.037182909,0.0</coordinates>
+            </Point>
+            <name>Читай Город (Chitay Gorod)</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/1159771'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_129">
+            <Point id="geom_127">
+                <extrude>0</extrude>
+                <coordinates>37.8015625477,48.004258924,0.0</coordinates>
+            </Point>
+            <name>Sun City</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/1477738'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_130">
+            <Point id="geom_128">
+                <extrude>0</extrude>
+                <coordinates>37.8054463863,48.0000776052,0.0</coordinates>
+            </Point>
+            <name>Puzata Hata</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/829312'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+        <Placemark id="feat_131">
+            <Point id="geom_129">
+                <extrude>0</extrude>
+                <coordinates>37.7613347769,48.0056083202,0.0</coordinates>
+            </Point>
+            <name>Старая клюшка</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <description>&lt;a href='http://gowalla.com/spots/1456942'&gt;Gowalla page&lt;/a&gt;</description>
+        </Placemark>
+    </Document>
+</kml>

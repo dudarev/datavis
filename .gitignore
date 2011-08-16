@@ -1,5 +1,9 @@
 *.swp
+*.swo
+*.swn
 004_twitter_graph
 005_list_subscribers
 006_cities_population_distribution
 007_pois_distribution
+008_graticule_sectors_visited_with_gowalla
+temp*
