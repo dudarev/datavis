@@ -26,3 +26,13 @@ Total number of stamps is printed at the end.
     python download_gowalla_pages.py
 
 The process may be interupted and resumed, downloaded data is not re-downloaded.
+
+3. Create KML file with all points (by default is saved to stamps.kml). Some variations:
+
+KML file without images (just pins):
+    python create_kml.py -n -o stamps_no_image.kml
+
+Debug mode (only 10 points):
+    python create_kml.py -d
+
+4. 

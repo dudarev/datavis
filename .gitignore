@@ -14,3 +14,4 @@ temp*
 008_graticule_sectors_visited_with_gowalla/*.html
 008_graticule_sectors_visited_with_gowalla/*.json
 008_graticule_sectors_visited_with_gowalla/data
+008_graticule_sectors_visited_with_gowalla/*.kml
