@@ -1,4 +1,4 @@
-Either checkins or stamps may be parsed. 
+1. Either checkins or stamps may be parsed. 
 
 Press "More" several times and save checkins from (replace 'dudarev' with any other username)
 
@@ -10,8 +10,19 @@ Or save stamps (also pressing "More" as nessesary and replacing username)
     http://gowalla.com/users/dudarev/stamps
     Save to file stamps.html
 
+Use one of commands below depending on which file you are parsing
+
+    python parse_gowalla_checkins.py
+    python parse_gowalla_stamps.py
+
 In both cases unique places are found and placed into file
 
     stamps.json
 
 Total number of stamps is printed at the end.
+
+2. Download all points data with
+
+    python download_gowalla_pages.py
+
+The process may be interupted and resumed, downloaded data is not re-downloaded.
