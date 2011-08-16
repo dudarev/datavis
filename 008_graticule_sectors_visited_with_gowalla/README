@@ -1,0 +1,17 @@
+Either checkins or stamps may be parsed. 
+
+Press "More" several times and save checkins from (replace 'dudarev' with any other username)
+
+    http://gowalla.com/users/dudarev
+    Save to file checkins.html
+
+Or save stamps (also pressing "More" as nessesary and replacing username)
+
+    http://gowalla.com/users/dudarev/stamps
+    Save to file stamps.html
+
+In both cases unique places are found and placed into file
+
+    stamps.json
+
+Total number of stamps is printed at the end.

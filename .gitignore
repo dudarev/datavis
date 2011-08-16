@@ -11,3 +11,5 @@ temp*
 006_cities_population_distribution/cities15000.zip
 007_pois_distribution/*.json
 007_pois_distribution/*.osm
+008_graticule_sectors_visited_with_gowalla/*.html
+008_graticule_sectors_visited_with_gowalla/*.json
