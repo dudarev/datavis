@@ -35,4 +35,6 @@ KML file without images (just pins):
 Debug mode (only 10 points):
     python create_kml.py -d
 
-4. 
+4. Create file with visited sectors.
+
+    python create_shapefiles.py
