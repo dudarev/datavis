@@ -35,8 +35,9 @@ from pylab import *
 
 alignment = {'horizontalalignment':'center', 'verticalalignment':'baseline'}
 
-figure(figsize=(8,8))
+figure(figsize=(5,5))
 axes([0, 0, 1, 1])
+axis('off')
 
 font0 = FontProperties(size=18)
 
@@ -50,7 +51,7 @@ dx = 0.1
 
 font.set_size(24)
 t = text(0.5, y, lines[0].strip(), fontproperties=font, **alignment)
-font.set_size(22)
+font.set_size(20)
 
 for l in lines[2:]:
     y = y - dy
@@ -66,6 +67,5 @@ for l in lines[2:]:
         font.set_weight('normal')
 
 savefig('walking_calendar.png',dpi=72)
-axis('off')
 
 show()
