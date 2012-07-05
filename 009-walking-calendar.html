@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"> 
     <head> 
         <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
-        <title>Graticule Sectors Visited with Gowalla</title> 
+        <title>Walking calendar</title> 
         <link type="image/x-icon" href="/favicon.ico" rel= "shortcut icon" /> 
         <link rel="stylesheet" href="screen.css" type="text/css" media="screen, projection">
         <link rel="stylesheet" href="print.css" type="text/css" media="print">
@@ -16,47 +16,23 @@
 
         <div id="navigation">
             <div class="navigation-container">
-            <a href="/datavis">Simple Data Visualization</a>: <span class="title">Graticule Sectors Visited with Gowalla</span>
+            <a href="/datavis">Simple Data Visualization</a>: <span class="title">Walking calendar</span>
             </div>
         </div>
 
         <div class="container">
 
-            <h1> Graticule Sectors Visited with Gowalla</h1>
+            <h1> Walking calendar</h1>
 
             <div id="abstract">
             
             </div>
             
             <div class="span-16 last" id="content">
-            <p><strong>THIS IS A DRAFT</strong></p>
-<p>People like to map places they visit. There is a number of services that help to create a map of visited countries—just google for '<a class="reference external" href="http://www.google.com/search?q=map+visited+countries">map visited countries</a>'. In a global world the boundaries become less relevant, so it may be more fun to keep track of visits to another human abstraction, graticule sectors: parallels and meredians form a grid, one may choose sectors of one by one degree and record which were visited. (Idea by <a class="reference external" href="http://twitter.com/#!/frestelse5117">&#64;frestelse5117</a>.)</p>
-<a class="reference external image-reference" href="008_map_laea_big.png"><img alt="Graticule sectors visited. Lambert azimuthal equal area projection." class="align-center" src="008_map_laea.png" /></a>
-<p>&nbsp;</p>
-<p>Images are clickable.</p>
-<p><a class="reference external" href="https://github.com/dudarev/datavis/tree/master/008_graticule_sectors_visited_with_gowalla">Source code</a>. Read README for instructions.</p>
-<p><strong>Things to write about</strong></p>
-<ul class="simple">
-<li>Properties of these two projections<ul>
-<li>Links to other possible projections</li>
-</ul>
-</li>
-<li>Libraries<ul>
-<li>Basemap</li>
-<li>simplekml</li>
-<li>shpy</li>
-</ul>
-</li>
-<li>Link to KML on Google Maps</li>
-<li>Extension to other services<ul>
-<li>President Obama on 4sq</li>
-<li>Geotagged photos</li>
-<li>Locovidi</li>
-</ul>
-</li>
-</ul>
-<a class="reference external image-reference" href="008_map_cyl_big.png"><img alt="Graticule sectors visited. Cylindrical projection." class="align-center" src="008_map_cyl.png" /></a>
-<p>&nbsp;</p>
+            <p><a class="reference external" href="http://www.mattcutts.com/blog/">Matt Cutts</a> popularizes the idea of <a class="reference external" href="http://www.youtube.com/watch?v=VxhynMlg6S4">30-days challenges</a>. I wanted to show results of such a challenge in a callendar view, with days when the challenge was met highlighted.</p>
+<a class="reference external image-reference" href="009_walking_calendar.png"><img alt="Days when walking challenge was met." class="align-center" src="009_walking_calendar.png" /></a>
+<p>The challenge was to walk at least 5 kilometers per day. I tracked walking with <a class="reference external" href="http://mytracks.appspot.com/">My Tracks</a> app on my Android phone. In fact, in a few days I could not track the walking because of low battery.</p>
+<p>In the <a class="reference external" href="https://github.com/dudarev/datavis/tree/master/009_walking_distance">source code</a> there are a few scripts that allow to get GPX tracks from the phone (I am using <a class="reference external" href="https://play.google.com/store/apps/details?id=lutey.FTPServer&amp;hl=en">FTP server app</a> there), calculate tracks length for one day (I've forked and modified <a class="reference external" href="http://github.com/dudarev/pygpx">pygpx library</a> for this), and generate the image above.</p>
 
             </div>
 

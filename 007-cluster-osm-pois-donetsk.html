@@ -29,13 +29,13 @@
             </div>
             
             <div class="span-16 last" id="content">
-            <div align="center" class="align-center"><img alt="cluster of openstreetmap POIs in Donetsk" class="align-center" src="007_pois_cluster.png" /></div>
+            <img alt="cluster of openstreetmap POIs in Donetsk" class="align-center" src="007_pois_cluster.png" />
 <p>In the first iteration of <a class="reference external" href="http://www.locopoly.com/">Locopoly</a> <a class="reference external" href="https://github.com/dudarev/locopoly/wiki/en%3ARules">rules</a> a player will randomly jump from one location to another within <tt class="docutils literal">1 km</tt>. Will it be possible to jump to every location in a city?</p>
 <p>This question can be reduced to a <a class="reference external" href="http://en.wikipedia.org/wiki/Hierarchical_clustering">hierarhical clustering</a> problem, one of the standard problems of <a class="reference external" href="http://en.wikipedia.org/wiki/Machine_learning">machine learning</a>. In general, the clusters can be calculated based on some <a class="reference external" href="http://en.wikipedia.org/wiki/Hierarchical_clustering#Linkage_criteria">linkage criteria</a>. For the formulated problem we need to use minimum or single-linkage clustering.</p>
 <p>The clustering is done based on various distances, not necessary in Euclidian space. Here, we parse POIs from an OpenStreetMap file and <a class="reference external" href="https://github.com/dudarev/datavis/blob/master/007_pois_distribution/parse_pois.py#L96">convert</a> them to <tt class="docutils literal">(x,y)</tt> grid neglecting curvature of the Earth.</p>
 <p>Any clustering libraries may be used. We use <a class="reference external" href="https://mlpy.fbk.eu/">mlpy</a>, <a class="reference external" href="http://code.google.com/p/scipy-cluster/">scipy-cluster</a> also seems to be interesting.</p>
 <p>For jumping distance of <tt class="docutils literal">1 km</tt> several clusters are formed in Donetsk at the moment. The city was formed from many settlement and modern POIs distribution is a good indication of history. Still, all this clusters will be connected in the future when more places are mapped.</p>
-<div align="center" class="align-center"><img alt="number of POIs in each cluster" class="align-center" src="007_clusters_numbers.png" /></div>
+<img alt="number of POIs in each cluster" class="align-center" src="007_clusters_numbers.png" />
 <p>The largest cluster has more than <tt class="docutils literal">450</tt> spots—a good initial playground.</p>
 <p><a class="reference external" href="https://github.com/dudarev/datavis/tree/master/007_pois_distribution">The code is available at Github</a>. It is good to reference:</p>
 <ul class="simple">

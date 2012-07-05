@@ -23,11 +23,21 @@
         
             
             <div class="span-16" id="content">
+                <h2><a href="./009-walking-calendar.html">Walking calendar</a></h2>
+                <p><a class="reference external" href="http://www.mattcutts.com/blog/">Matt Cutts</a> popularizes the idea of <a class="reference external" href="http://www.youtube.com/watch?v=VxhynMlg6S4">30-days challenges</a>. I wanted to show results of such a challenge in a callendar view, with days when the challenge was met highlighted.</p>
+<a class="reference external image-reference" href="009_walking_calendar.png"><img alt="Days when walking challenge was met." class="align-center" src="009_walking_calendar.png" /></a>
+<p>The challenge was to walk at least 5 kilometers per day. I tracked walking with <a class="reference external" href="http://mytracks.appspot.com/">My Tracks</a> app on my Android phone. In fact, in a few days I could not track the walking because of low battery.</p>
+<p>In the <a class="reference external" href="https://github.com/dudarev/datavis/tree/master/009_walking_distance">source code</a> there are a few scripts that allow to get GPX tracks from the phone (I am using <a class="reference external" href="https://play.google.com/store/apps/details?id=lutey.FTPServer&amp;hl=en">FTP server app</a> there), calculate tracks length for one day (I've forked and modified <a class="reference external" href="http://github.com/dudarev/pygpx">pygpx library</a> for this), and generate the image above.</p>
+
+            </div>
+            
+        
+            
+            <div class="span-16" id="content">
                 <h2><a href="./008-graticule-sectors-visited-with-gowalla.html">Graticule Sectors Visited with Gowalla</a></h2>
                 <p><strong>THIS IS A DRAFT</strong></p>
 <p>People like to map places they visit. There is a number of services that help to create a map of visited countries—just google for '<a class="reference external" href="http://www.google.com/search?q=map+visited+countries">map visited countries</a>'. In a global world the boundaries become less relevant, so it may be more fun to keep track of visits to another human abstraction, graticule sectors: parallels and meredians form a grid, one may choose sectors of one by one degree and record which were visited. (Idea by <a class="reference external" href="http://twitter.com/#!/frestelse5117">&#64;frestelse5117</a>.)</p>
-<a class="reference external image-reference" href="008_map_laea_big.png"><div align="center" class="align-center"><img alt="Graticule sectors visited. Lambert azimuthal equal area projection." class="align-center" src="008_map_laea.png" /></div>
-</a>
+<a class="reference external image-reference" href="008_map_laea_big.png"><img alt="Graticule sectors visited. Lambert azimuthal equal area projection." class="align-center" src="008_map_laea.png" /></a>
 <p>&nbsp;</p>
 <p>Images are clickable.</p>
 <p><a class="reference external" href="https://github.com/dudarev/datavis/tree/master/008_graticule_sectors_visited_with_gowalla">Source code</a>. Read README for instructions.</p>
@@ -43,6 +53,7 @@
 <li>shpy</li>
 </ul>
 </li>
+<li>Link to KML on Google Maps</li>
 <li>Extension to other services<ul>
 <li>President Obama on 4sq</li>
 <li>Geotagged photos</li>
@@ -50,8 +61,7 @@
 </ul>
 </li>
 </ul>
-<a class="reference external image-reference" href="008_map_cyl_big.png"><div align="center" class="align-center"><img alt="Graticule sectors visited. Cylindrical projection." class="align-center" src="008_map_cyl.png" /></div>
-</a>
+<a class="reference external image-reference" href="008_map_cyl_big.png"><img alt="Graticule sectors visited. Cylindrical projection." class="align-center" src="008_map_cyl.png" /></a>
 <p>&nbsp;</p>
 
             </div>
@@ -60,13 +70,13 @@
             
             <div class="span-16" id="content">
                 <h2><a href="./007-cluster-osm-pois-donetsk.html">Cluster OpenStreetMap POIs</a></h2>
-                <div align="center" class="align-center"><img alt="cluster of openstreetmap POIs in Donetsk" class="align-center" src="007_pois_cluster.png" /></div>
+                <img alt="cluster of openstreetmap POIs in Donetsk" class="align-center" src="007_pois_cluster.png" />
 <p>In the first iteration of <a class="reference external" href="http://www.locopoly.com/">Locopoly</a> <a class="reference external" href="https://github.com/dudarev/locopoly/wiki/en%3ARules">rules</a> a player will randomly jump from one location to another within <tt class="docutils literal">1 km</tt>. Will it be possible to jump to every location in a city?</p>
 <p>This question can be reduced to a <a class="reference external" href="http://en.wikipedia.org/wiki/Hierarchical_clustering">hierarhical clustering</a> problem, one of the standard problems of <a class="reference external" href="http://en.wikipedia.org/wiki/Machine_learning">machine learning</a>. In general, the clusters can be calculated based on some <a class="reference external" href="http://en.wikipedia.org/wiki/Hierarchical_clustering#Linkage_criteria">linkage criteria</a>. For the formulated problem we need to use minimum or single-linkage clustering.</p>
 <p>The clustering is done based on various distances, not necessary in Euclidian space. Here, we parse POIs from an OpenStreetMap file and <a class="reference external" href="https://github.com/dudarev/datavis/blob/master/007_pois_distribution/parse_pois.py#L96">convert</a> them to <tt class="docutils literal">(x,y)</tt> grid neglecting curvature of the Earth.</p>
 <p>Any clustering libraries may be used. We use <a class="reference external" href="https://mlpy.fbk.eu/">mlpy</a>, <a class="reference external" href="http://code.google.com/p/scipy-cluster/">scipy-cluster</a> also seems to be interesting.</p>
 <p>For jumping distance of <tt class="docutils literal">1 km</tt> several clusters are formed in Donetsk at the moment. The city was formed from many settlement and modern POIs distribution is a good indication of history. Still, all this clusters will be connected in the future when more places are mapped.</p>
-<div align="center" class="align-center"><img alt="number of POIs in each cluster" class="align-center" src="007_clusters_numbers.png" /></div>
+<img alt="number of POIs in each cluster" class="align-center" src="007_clusters_numbers.png" />
 <p>The largest cluster has more than <tt class="docutils literal">450</tt> spots—a good initial playground.</p>
 <p><a class="reference external" href="https://github.com/dudarev/datavis/tree/master/007_pois_distribution">The code is available at Github</a>. It is good to reference:</p>
 <ul class="simple">
@@ -105,10 +115,10 @@
 <blockquote>
 more than <tt class="docutils literal">340</tt> cities have population more than <tt class="docutils literal">1,000,000</tt>; the city ranked 1,000th <em>in that data</em> has population of around <tt class="docutils literal">400,000</tt>.</blockquote>
 <p>This is curious to see how cities population is distributed. The plot below is for cumulative distribution of cities population.</p>
-<div align="center" class="align-center"><img alt="cumulative distribution of cities in dependence on population" class="align-center" src="006_distribution_hist.png" /></div>
+<img alt="cumulative distribution of cities in dependence on population" class="align-center" src="006_distribution_hist.png" />
 <p>The linear dependence in a log-log plot is an indication of a <a class="reference external" href="http://en.wikipedia.org/wiki/Power_law">power law</a> dependence. At some population the distribution changes the slope. Below <tt class="docutils literal">1,000,000</tt> inhabitants the slope is almost <tt class="docutils literal"><span class="pre">-1</span></tt> which indicates <tt class="docutils literal">1/x</tt> dependence. Then it changes, and changes again at 7 million, and 10 million inhabitants. I would attribute changes at 1 and 10 million to psychology of regional and national governments that treat cities above and below these numbers differently.</p>
 <p>Typically, this dependence is plotted in the form of size (population) <em>vs.</em> rank.</p>
-<div align="center" class="align-center"><img alt="rank-size distribution of cities" class="align-center" src="006_rank_size.png" /></div>
+<img alt="rank-size distribution of cities" class="align-center" src="006_rank_size.png" />
 <p><a class="reference external" href="http://en.wikipedia.org/wiki/Rank-size_distribution">Rank-size distribution</a> of cities population was noticed more than half a century ago and is a subject of multiple research studies.</p>
 <p><a class="reference external" href="https://github.com/dudarev/datavis/tree/master/006_cities_population_distribution">The code</a> to produce the plots is available at github. This is fascinating to play with it: to see if the distribution is universal from a country to country (it's not for large populations), to come up with a simple interpolation formula that approximates it and so on. But, to keep the note brief, these exercises are for a truly curious reader.</p>
 
@@ -118,7 +128,7 @@ more than <tt class="docutils literal">340</tt> cities have population more than
             
             <div class="span-16" id="content">
                 <h2><a href="./005-cncdnua-subscribers.html">New Subscribers</a></h2>
-                <div align="center" class="align-center"><img alt="new subscribers to cncdnua mailing list" class="align-center" src="005_subscribers.png" /></div>
+                <img alt="new subscribers to cncdnua mailing list" class="align-center" src="005_subscribers.png" />
 <p>After <a class="reference external" href="http://cnc.dn.ua">Donetsk coffee'n'code</a> announcement in a popular Russian collective blog <a class="reference external" href="http://habrahabr.ru">Habrahabr</a>, almost a dozen of new people subscribed to the <a class="reference external" href="http://groups.google.com/group/cnc-donetsk">mailing list</a>. The plot above shows the number of new subscribers in last 20 months.</p>
 <p><a class="reference external" href="https://github.com/dudarev/datavis/blob/master/005_list_subscribers/subscribers.py">The code</a> is available on Github. <a class="reference external" href="http://www.ianlewis.org/en/python-date-range-iterator">A blog post</a> by Ian Lewis about Python date range iterator was helpful to write an iterator over months.  The plot style (custom tick labels) is heavily based on Mark Larsen's answer to a <a class="reference external" href="http://stackoverflow.com/questions/2216273/irregular-matplotlib-date-x-axis-labels">Stackoverflow question</a>.</p>
 
@@ -128,11 +138,11 @@ more than <tt class="docutils literal">340</tt> cities have population more than
             
             <div class="span-16" id="content">
                 <h2><a href="./003-when-followers-tweet.html">When Followers Tweet</a></h2>
-                <div align="center" class="align-center"><img alt="&lt;http://4.bp.blogspot.com/_rZy4zSAOlB8/SyjEdL79EEI/AAAAAAAABTA/GVT_efUXYqk/s1600-h/003_izba4i.png&gt;`_" class="align-center" src="http://4.bp.blogspot.com/_rZy4zSAOlB8/SyjEdL79EEI/AAAAAAAABTA/GVT_efUXYqk/s320/003_izba4i.png" /></div>
+                <img alt="&lt;http://4.bp.blogspot.com/_rZy4zSAOlB8/SyjEdL79EEI/AAAAAAAABTA/GVT_efUXYqk/s1600-h/003_izba4i.png&gt;`_" class="align-center" src="http://4.bp.blogspot.com/_rZy4zSAOlB8/SyjEdL79EEI/AAAAAAAABTA/GVT_efUXYqk/s320/003_izba4i.png" />
 <p>One of the goals of <a class="reference external" href="http://www.tweetingplaces.com/">TweetingPlaces</a> is to help small local businesses to connect to their customers. One of the ways for them to increase exposure on Twitter may be to schedule tweets of non-immediate importance to times when the message may be seen by most of the followers. The plot above shows activity of followers on Twitter. It may help to get some insights on when to schedule tweets. Still, the best metric can be provided by direct measurements of the reactions on tweets posted at different times.</p>
 <p>The plot is for a coffee shop &quot;<a class="reference external" href="http://www.izba4i.com/">Изба-читальня</a>&quot; in Donetsk, Ukraine (during winter in UTC +2 timezone). Its tweets can be found at <a class="reference external" href="http://twitter.com/izba4i">&#64;izba4i</a> . Most of its followers are Donetsk locals and tweet from 9 a.m. till 11 p.m. of local time with peak around 1 p.m. (lunch time).</p>
 <p>The focus of <a class="reference external" href="http://www.tweetingplaces.com/">TweetingPlaces</a> is global, and scheduling tweets at particular times may be not a good strategy, but out of curiosity here is a plot for <a class="reference external" href="http://twitter.com/tweetingplaces">&#64;tweetingplaces</a> followers:</p>
-<div align="center" class="align-center"><img alt="&lt;http://3.bp.blogspot.com/_rZy4zSAOlB8/SyjHlbzPZsI/AAAAAAAABTI/LQcLlFiajIk/s1600-h/003_tweetingplaces.png&gt;`_" class="align-center" src="http://3.bp.blogspot.com/_rZy4zSAOlB8/SyjHlbzPZsI/AAAAAAAABTI/LQcLlFiajIk/s320/003_tweetingplaces.png" /></div>
+<img alt="&lt;http://3.bp.blogspot.com/_rZy4zSAOlB8/SyjHlbzPZsI/AAAAAAAABTI/LQcLlFiajIk/s1600-h/003_tweetingplaces.png&gt;`_" class="align-center" src="http://3.bp.blogspot.com/_rZy4zSAOlB8/SyjHlbzPZsI/AAAAAAAABTI/LQcLlFiajIk/s320/003_tweetingplaces.png" />
 <p>The minimum is much less pronounced and the followers start tweeting more than average after 8 a.m. Eastern Time.</p>
 <p><a class="reference external" href="http://github.com/dudarev/datavis/tree/master/003_twitter_time_of_day/">The code</a> for these plots is available at github. In addition to <a class="reference external" href="http://matplotlib.sourceforge.net/">Matplotlib</a> that has been used in all the previous examples, <a class="reference external" href="http://code.google.com/p/tweepy/">tweepy</a> library is used to interact with Twitter API (note that you may have to limit number of requests per hour if many of them have to be made). Also, <a class="reference external" href="http://pyyaml.org/wiki/PyYAML">PyYAML</a> does not come in standard library.</p>
 
@@ -142,7 +152,7 @@ more than <tt class="docutils literal">340</tt> cities have population more than
             
             <div class="span-16" id="content">
                 <h2><a href="./002-pareto-principle-in-texts.html">Pareto Principle in Texts</a></h2>
-                <div align="center" class="align-center"><img alt="&lt;http://1.bp.blogspot.com/_rZy4zSAOlB8/SrSlYqKUqHI/AAAAAAAABNM/kv8_jLFJH-U/s1600-h/fraction.png&gt;`_" class="align-center" src="http://1.bp.blogspot.com/_rZy4zSAOlB8/SrSlYqKUqHI/AAAAAAAABNM/kv8_jLFJH-U/s320/fraction.png" /></div>
+                <img alt="&lt;http://1.bp.blogspot.com/_rZy4zSAOlB8/SrSlYqKUqHI/AAAAAAAABNM/kv8_jLFJH-U/s1600-h/fraction.png&gt;`_" class="align-center" src="http://1.bp.blogspot.com/_rZy4zSAOlB8/SrSlYqKUqHI/AAAAAAAABNM/kv8_jLFJH-U/s320/fraction.png" />
 <p>A couple years ago I did a small project that would allow a language learner to estimate a fraction of text she would understand by answering which words she knows and which does not. The idea was to split all the words in the text into groups, so that each group is met a given fraction of times in the text. To be specific, at the time the groups were chosen so that each group corresponds to <tt class="docutils literal">10%</tt> of all text. Further details of the testing algorithm may be found in a <a class="reference external" href="http://dudarev.com/english_test/">small essay in Russian</a> .</p>
 <p>It was surprising to see how well <a class="reference external" href="http://en.wikipedia.org/wiki/Pareto_principle">Pareto principle</a> works with words. As it is stated in the Wikipedia article, the essence of Pareto's observation is that:</p>
 <blockquote>
@@ -156,7 +166,7 @@ for many events, roughly <tt class="docutils literal">80%</tt> of the effects co
             
             <div class="span-16" id="content">
                 <h2><a href="./001-simple-bar.html">Bar Histogram</a></h2>
-                <div align="center" class="align-center"><img alt="alternate text" class="align-center" src="001_simple_bar.png" /></div>
+                <img alt="alternate text" class="align-center" src="001_simple_bar.png" />
 <p>Sometimes a big task requires many small steps to be completed. When planning, I split it into such steps that are clear how to complete in short time intervals. Timing each step may bring good dynamics into work, and sometimes signals that a step should be further divided. I was curious to see a visual representation of actual time intervals to complete a recent sequence of such steps.</p>
 <p>A simple bar histogram seemed sufficient to satisfy this curiosity. <a class="reference external" href="http://matplotlib.sourceforge.net/">Matplotlib</a> Python library was helpful as always. Some insight could be gained even from such a simple visualization. For instance, in that particular task, after some time, steps were taking longer (maybe it was a natural point to take a break? or may be a point to re-plan the further steps?).</p>
 <p>The code of this example is available at <a class="reference external" href="http://github.com/dudarev/datavis/blob/master/001_simple_bar/time_intervals.py">github</a>.</p>
