@@ -1,0 +1,9 @@
+For every file in `data/` calculate trip length.
+Calculate full length for each day in June.
+Mark days with trip length larger than 4 km on calendar (similar to http://calendaraboutnothing.com).
+
+```bash
+./getdata.sh
+python all_trips_length.py
+python plot_calendar.py
+```

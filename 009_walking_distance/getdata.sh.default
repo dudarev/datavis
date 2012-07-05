@@ -1,0 +1,13 @@
+#!/bin/bash
+
+HOST="192.168.1.101:2000"
+USER=""
+PASS=""
+LCD="data"
+RCD="/sdcard/MyTracks/gpx/"
+lftp -c "set ftp:list-options -a;
+open ftp://$USER:$PASS@$HOST; 
+lcd $LCD;
+cd $RCD;
+mget 2012_06*
+"
