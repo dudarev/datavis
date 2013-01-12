@@ -1,0 +1,6 @@
+Create PNG images for each frame. Combine them into one GIF.
+
+```bash
+python plot_year.py
+./animate.sh
+```
