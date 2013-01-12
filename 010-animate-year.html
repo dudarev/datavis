@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"> 
     <head> 
         <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
-        <title>Walking calendar</title> 
+        <title>Animated Changing Year with Matplotlib</title> 
         <link type="image/x-icon" href="/favicon.ico" rel= "shortcut icon" /> 
         <link rel="stylesheet" href="screen.css" type="text/css" media="screen, projection">
         <link rel="stylesheet" href="print.css" type="text/css" media="print">
@@ -16,25 +16,21 @@
 
         <div id="navigation">
             <div class="navigation-container">
-            <a href="/datavis">Simple Data Visualization</a>: <span class="title">Walking calendar</span>
+            <a href="/datavis">Simple Data Visualization</a>: <span class="title">Animated Changing Year with Matplotlib</span>
             </div>
         </div>
 
         <div class="container">
 
-            <h1> Walking calendar</h1>
+            <h1> Animated Changing Year with Matplotlib</h1>
 
             <div id="abstract">
             
             </div>
             
             <div class="span-16 last" id="content">
-            <p><a class="reference external" href="http://www.mattcutts.com/blog/">Matt Cutts</a> popularizes the idea of <a class="reference external" href="http://www.youtube.com/watch?v=VxhynMlg6S4">30-days challenges</a>.  I wanted to show results of such a challenge in a callendar view, with days when the challenge was met highlighted.</p>
-<a class="reference external image-reference" href="009_walking_calendar.png"><img alt="Days when walking challenge was met." class="align-center" src="009_walking_calendar.png" /></a>
-<p>The challenge was to walk at least 5 kilometers per day. I tracked walking with <a class="reference external" href="http://mytracks.appspot.com/">My Tracks</a>
-app on my Android phone. In fact, in a few days I could not track the walking because of low battery.</p>
-<p>In the <a class="reference external" href="https://github.com/dudarev/datavis/tree/master/009_walking_distance">source code</a> there are a few scripts that allow to get GPX tracks from the phone (I am using <a class="reference external" href="https://play.google.com/store/apps/details?id=lutey.FTPServer&amp;amp;hl=en">FTP server app</a> there), calculate tracks length for one day (I've forked and modified
-<a class="reference external" href="http://github.com/dudarev/pygpx">pygpx library</a> for this), and generate the image above.</p>
+            <a class="reference external image-reference" href="2013.gif"><img alt="2012 changing to 2013" class="align-center" src="2013.gif" /></a>
+<p>The <a class="reference external" href="https://github.com/dudarev/datavis/tree/master/010_animate_year">source code</a> for the image above is a good place to reference creation of animated GIFs with Matplotlib (PNG images created with Matplotlib are combined with <a class="reference external" href="http://www.imagemagick.org/script/index.php">Imagemagick</a>). It is also a good place to see how a custom font may be used, and how one may get a bounding box coordinates for text in Matplotlib.</p>
 
             </div>
 
